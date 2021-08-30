@@ -1,0 +1,167 @@
+CRITICAL - 2021-08-13 05:31:50 --> Cannot use object of type stdClass as array
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-13 05:32:57 --> Cannot use object of type stdClass as array
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-13 05:34:48 --> Undefined property: stdClass::$channel_title
+#0 /Users/user/Nex/app/Controllers/Api.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 45, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-13 05:34:55 --> Undefined property: stdClass::$channel_title
+#0 /Users/user/Nex/app/Controllers/Api.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 45, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-13 05:35:26 --> Undefined property: stdClass::$category_id
+#0 /Users/user/Nex/app/Controllers/Api.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 46, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-13 05:35:44 --> Undefined property: stdClass::$published_at
+#0 /Users/user/Nex/app/Controllers/Api.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 47, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-08-13 05:36:00 --> Unknown column 'y_id' in 'field list'
+CRITICAL - 2021-08-13 05:36:00 --> Unknown column 'y_id' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `se...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(50): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-13 05:36:01 --> Unknown column 'y_id' in 'field list'
+CRITICAL - 2021-08-13 05:36:01 --> Unknown column 'y_id' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `se...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(50): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-13 05:36:24 --> Unknown column 'y_id' in 'field list'
+CRITICAL - 2021-08-13 05:36:24 --> Unknown column 'y_id' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `se...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(52): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-13 05:36:56 --> Unknown column 'y_id' in 'field list'
+CRITICAL - 2021-08-13 05:36:56 --> Unknown column 'y_id' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `se...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(52): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-13 05:37:32 --> Unknown column 'yt_id' in 'field list'
+CRITICAL - 2021-08-13 05:37:32 --> Unknown column 'yt_id' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `se...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(52): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-08-13 05:42:55 --> There is no data to update.
+#0 /Users/user/Nex/system/BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/user/Nex/system/BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 /Users/user/Nex/system/Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
+#3 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->update(Array)
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_stats()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-08-13 05:43:45 --> There is no data to update.
+#0 /Users/user/Nex/system/BaseModel.php(1668): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /Users/user/Nex/system/BaseModel.php(880): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 /Users/user/Nex/system/Model.php(718): CodeIgniter\BaseModel->update(Array, NULL)
+#3 /Users/user/Nex/app/Controllers/Api.php(64): CodeIgniter\Model->update(Array)
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_stats()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-08-13 07:18:56 --> Unknown column 'code' in 'where clause'
+CRITICAL - 2021-08-13 07:18:56 --> Unknown column 'code' in 'where clause'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('SELECT `title`,...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `title`,...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `title`,...')
+#3 /Users/user/Nex/app/Controllers/Api.php(75): CodeIgniter\Database\BaseConnection->query('SELECT `title`,...')
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_api()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-08-13 07:19:42 --> Undefined property: stdClass::$image
+#0 /Users/user/Nex/app/Controllers/Api.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 81, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_api()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-13 07:23:16 --> Undefined property: stdClass::$likeCount
+#0 /Users/user/Nex/app/Controllers/Api.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_api()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-13 07:23:34 --> Undefined property: stdClass::$dislikeCount
+#0 /Users/user/Nex/app/Controllers/Api.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->youtube_api()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

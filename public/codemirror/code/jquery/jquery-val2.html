@@ -1,0 +1,28 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery val()&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; /&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+  $(&quot;#language&quot;).change(function() {
+     var val = $(this).val();
+	 $(&quot;#response&quot;).html(val);
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;select name=&quot;language&quot; id=&quot;language&quot; class=&quot;form-control&quot; style=&quot;width:40%&quot;&gt;
+	 &lt;option value=&quot;&quot;&gt; -- Select --&lt;/option&gt;
+	 &lt;option value=&quot;Php&quot;&gt;Php&lt;/option&gt;
+	 &lt;option value=&quot;Html&quot;&gt;Html&lt;/option&gt;
+	 &lt;option value=&quot;Css&quot;&gt;Css&lt;/option&gt;
+	 &lt;option value=&quot;JavaScript&quot;&gt;JavaScript&lt;/option&gt;
+	 &lt;option value=&quot;Jquery&quot;&gt;Jquery&lt;/option&gt;
+ &lt;/select&gt;&lt;br /&gt;
+ &lt;span id=&quot;response&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+ &lt;/body&gt;
+&lt;/html&gt;

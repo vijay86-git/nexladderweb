@@ -1,0 +1,29 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery serializeArray()&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; /&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+  $(&quot;#button&quot;).click(function() {
+    var res = $(&quot;form&quot;).serializeArray();
+    $.each(res, function(i, val) {
+         $(&quot;#response&quot;).append(val.name  + &quot; : &quot; + val.value + &quot; &quot;);
+     });
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div&gt;
+   &lt;form name=&quot;&quot; id=&quot;&quot;&gt;
+     &lt;p&gt;First Name &lt;input type=&quot;text&quot; name=&quot;first_name&quot; value=&quot;&quot; /gt;&lt;/p&gt;
+     &lt;p&gt;Last Name &lt;input type=&quot;text&quot; name=&quot;last_name&quot; value=&quot;&quot; /gt;&lt;/p&gt;
+   &lt;/form&gt;
+ &lt;/div&gt;
+ &lt;button style=&quot;margin:0 0 10px 0;background:#e8e8e8;&quot; class=&quot;btn&quot; id=&quot;button&quot;&gt;serializeArray&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
+ &lt;div id='response'&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;

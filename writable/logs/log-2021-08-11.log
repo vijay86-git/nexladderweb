@@ -1,0 +1,18 @@
+CRITICAL - 2021-08-11 11:40:03 --> Call to undefined method Google\GTrends::trendingSearches()
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->subjects()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-11 11:41:51 --> Call to undefined method Google\GTrends::trendingSearches()
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->subjects()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-11 11:41:52 --> Call to undefined method Google\GTrends::trendingSearches()
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->subjects()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -1,0 +1,21 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;jQuery offset()&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; /&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function() {
+  $(&quot;#button&quot;).click(function() {
+     var offset = $(&quot;p&quot;).offset();
+	 alert(&quot;Top: &quot; + offset.top + &quot; Left: &quot; + offset.left);
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;p style=&quot;margin:10px 0 0 10px&quot;&gt;&lt;lorem ipsum dolor sit&lt;/p&gt;
+ &lt;button style=&quot;margin:0 0 10px 0;background:#e8e8e8;&quot; class=&quot;btn&quot; id=&quot;button&quot;&gt;Click here to return offset coordinate of p element&lt;/button&gt;&lt;br /&gt;
+ &lt;/body&gt;
+&lt;/html&gt;

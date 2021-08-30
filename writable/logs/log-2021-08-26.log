@@ -1,0 +1,173 @@
+CRITICAL - 2021-08-26 09:59:02 --> Undefined index: trends
+#0 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/Users/user/Nex...', 66, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-26 09:59:46 --> Call to undefined function App\Controllers\json_decorde()
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-26 12:23:14 --> Undefined variable: content
+#0 /Users/user/Nex/app/Controllers/Api.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Users/user/Nex...', 61, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-26 12:23:28 --> Undefined property: stdClass::$parent_id
+#0 /Users/user/Nex/app/Controllers/Api.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 64, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-26 12:35:48 --> Use of undefined constant TWITTER_DEFAULT_WOEID - assumed 'TWITTER_DEFAULT_WOEID' (this will throw an Error in a future version of PHP)
+#0 /Users/user/Nex/app/Controllers/Api.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/Users/user/Nex...', 49, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-26 12:42:33 --> Undefined property: stdClass::$name
+#0 /Users/user/Nex/app/Controllers/Api.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/Users/user/Nex...', 60, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-08-26 12:43:11 --> Unknown column 'promoted_content' in 'field list'
+CRITICAL - 2021-08-26 12:43:11 --> Unknown column 'promoted_content' in 'field list'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-08-26 12:44:42 --> syntax error, unexpected '[', expecting ')'
+#0 /Users/user/Nex/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/user/Nex...')
+#1 /Users/user/Nex/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /Users/user/Nex/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /Users/user/Nex/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-08-26 12:44:50 --> Column 'tweet_volume' cannot be null
+CRITICAL - 2021-08-26 12:44:50 --> Column 'tweet_volume' cannot be null
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-26 12:45:44 --> Column 'tweet_volume' cannot be null
+CRITICAL - 2021-08-26 12:45:44 --> Column 'tweet_volume' cannot be null
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-26 12:47:25 --> Column 'tweet_volume' cannot be null
+CRITICAL - 2021-08-26 12:47:25 --> Column 'tweet_volume' cannot be null
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2021-08-26 12:49:58 --> syntax error, unexpected 'INTO' (T_STRING)
+#0 /Users/user/Nex/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/user/Nex...')
+#1 /Users/user/Nex/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /Users/user/Nex/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /Users/user/Nex/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-08-26 12:51:02 --> Column 'tweet_volume' cannot be null
+CRITICAL - 2021-08-26 12:51:02 --> Column 'tweet_volume' cannot be null
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-26 12:51:43 --> Column 'tweet_volume' cannot be null
+CRITICAL - 2021-08-26 12:51:43 --> Column 'tweet_volume' cannot be null
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('INSERT INTO `tw...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tw...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tw...')
+#3 /Users/user/Nex/system/Database/BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tw...', Array, false)
+#4 /Users/user/Nex/system/Model.php(259): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/user/Nex/system/BaseModel.php(774): CodeIgniter\Model->doInsert(Array)
+#6 /Users/user/Nex/system/Model.php(686): CodeIgniter\BaseModel->insert(Array, true)
+#7 /Users/user/Nex/app/Controllers/Api.php(66): CodeIgniter\Model->insert(Array)
+#8 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter()
+#9 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#10 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2021-08-26 12:56:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+CRITICAL - 2021-08-26 12:56:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('SELECT `name`, ...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`, ...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`, ...')
+#3 /Users/user/Nex/app/Controllers/Api.php(80): CodeIgniter\Database\BaseConnection->query('SELECT `name`, ...')
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter_api()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-08-26 12:56:56 --> Unknown column 'weoid' in 'where clause'
+CRITICAL - 2021-08-26 12:56:56 --> Unknown column 'weoid' in 'where clause'
+#0 /Users/user/Nex/system/Database/MySQLi/Connection.php(329): mysqli->query('SELECT `name`, ...')
+#1 /Users/user/Nex/system/Database/BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`, ...')
+#2 /Users/user/Nex/system/Database/BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`, ...')
+#3 /Users/user/Nex/app/Controllers/Api.php(80): CodeIgniter\Database\BaseConnection->query('SELECT `name`, ...')
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Api->twitter_api()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

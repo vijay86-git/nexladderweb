@@ -1,0 +1,364 @@
+CRITICAL - 2021-08-07 01:08:32 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:08:50 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:11:06 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:11:32 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:12:10 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('codemirror', 'html', 'html-intro')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:22:22 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('public', 'codemirror', 'code', 'html', 'html-intro.html')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:28:23 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:28:25 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('images', 'codemirror', 'lib', 'bin', 'images', 'logo.png')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:13 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:17 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:18 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:20 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:22 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:24 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:26 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 01:41:32 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 42, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:04:35 --> Cannot redeclare App\Controllers\Page::about()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-08-07 03:13:16 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:13:58 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:14:37 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:15:25 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:15:41 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:16:32 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 58, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:17:48 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 60, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:17:53 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 60, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:26:14 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 74, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:26:20 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 74, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:26:35 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 74, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:28:21 --> syntax error, unexpected ')'
+#0 /Users/user/Nex/system/Autoloader/Autoloader.php(273): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/user/Nex...')
+#1 /Users/user/Nex/system/Autoloader/Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /Users/user/Nex/system/CodeIgniter.php(885): class_exists('\\App\\Controller...', true)
+#5 /Users/user/Nex/system/CodeIgniter.php(421): CodeIgniter\CodeIgniter->startController()
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-08-07 03:28:35 --> Too few arguments to function App\Controllers\Page::__construct(), 0 passed in /Users/user/Nex/system/CodeIgniter.php on line 900 and exactly 1 expected
+#0 /Users/user/Nex/system/CodeIgniter.php(900): App\Controllers\Page->__construct()
+#1 /Users/user/Nex/system/CodeIgniter.php(426): CodeIgniter\CodeIgniter->createController()
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-07 03:28:50 --> Too few arguments to function App\Controllers\Page::contact_us(), 0 passed in /Users/user/Nex/system/CodeIgniter.php on line 928 and exactly 1 expected
+#0 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->contact_us()
+#1 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#2 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-08-07 03:31:24 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 77, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:31:29 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 77, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:33:03 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:33:08 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:33:12 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:33:21 --> email is not a valid rule.
+#0 /Users/user/Nex/system/Validation/Validation.php(321): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('email')
+#1 /Users/user/Nex/system/Validation/Validation.php(159): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sdf', Array, Array)
+#2 /Users/user/Nex/system/Controller.php(183): CodeIgniter\Validation\Validation->run()
+#3 /Users/user/Nex/app/Controllers/Page.php(37): CodeIgniter\Controller->validate(Array)
+#4 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->contact_us()
+#5 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#6 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-08-07 03:33:52 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:34:01 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:34:06 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 83, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:34:51 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 82, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:34:58 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 82, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:39:24 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:39:34 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:40:10 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:40:17 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:42:35 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:44:32 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:46:09 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:46:23 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:46:52 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-08-07 03:47:10 --> Trying to access array offset on value of type null
+#0 /Users/user/Nex/app/Controllers/Page.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/Users/user/Nex...', 84, Array)
+#1 /Users/user/Nex/system/CodeIgniter.php(928): App\Controllers\Page->topics('build', 'assets', 'css', 'bootstrap.min.c...')
+#2 /Users/user/Nex/system/CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#3 /Users/user/Nex/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Users/user/Nex/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
