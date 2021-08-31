@@ -20,7 +20,7 @@
          <?php echo $this->renderSection('content') ?>
       </div>
       <div class="footer marginTop40">
-          <?php echo $this->include('Frontend/Partials/footer.php'); ?>
+          <?php echo $this->include('Frontend/Partials/Footer.php'); ?>
       </div>
       <!-- End Wrapper -->
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
