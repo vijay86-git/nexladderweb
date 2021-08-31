@@ -62,7 +62,14 @@ class Page extends BaseController
 
 	public function sitemap()
 	{ 
-		 return view('Frontend/Pages/sitemap');
+		 $subjects = $this->_subjectobj->select(['name', 'slug', 'image'])->where(['status', 1, 'show_nav' => 1])->get();
+		 foreach($subjects as $subject):
+			$arr['subject'] = $subject['name'];
+			$arr['slug']    = $subject['slug'];
+			$arr['topics']  = $this->_sectionobj->where('subject_id', $subject['id'])->get(); 
+			$res[]          = $arr; 
+		 endforeach; 
+		 return view('Frontend/Pages/sitemap', compact('res'));
 	}
 
 

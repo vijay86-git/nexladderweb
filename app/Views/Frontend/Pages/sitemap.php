@@ -16,20 +16,34 @@
                   </script>
                </div>
             </div>
-
+            
             <div class="row">
-               <div class="col-md-12" id="" style="height:400px">
-                  <h2>About Us</h2>
-                  <p>
-                     About Us - nexladder.com is a learning online platform that helps anyone can learn Web Technologies. nexladder provides all web tutorials like Php, Mysqli, Vuejs, Html, Jquery etc in simple and easy steps starting from basic to advanced concepts with examples. nexladder helps students, developers and project manager where they can learn topics in easy and simple language with examples. To make our website better for you, we bring updates to the website regularly.
-                  </p>
-                  <br />
-                  <p>
-                     Our mission - To help you learn the skills you need to achieve your goal.
-                  </p>
-               </div>
-               <div class="col-md-1"></div>
-            </div>
+                <div class="col-md-12">
+                    <h1>Sitemap</h1>
+                     <?php
+                        foreach($res as $result):
+                     ?>
+                           <div class="col-md-3">
+                                 <div class="sitemap">
+                                     <a href="<?php echo route($result['slug']); ?>" title="<?php echo $result['subject'] ?>"><h2><?php echo $result['subject'] ?></h2></a>
+                                     <ul>
+                                        <?php
+                                          foreach ($result['topics'] as $topics):
+                                       ?>
+                                          <li><a title="<?php echo $topics['topic'] ?>" href="<?php echo topic_route($result['slug'], $topics['slug']); ?>"><?php echo $topics['topic'] ?></a></li>
+                                       <?php
+                                         endforeach;
+                                       ?>
+                                     </ul>
+                                </div>
+                            </div>
+                    <?php
+                     endforeach;
+                    ?>
+
+                 </div>
+              </div>
+
          </div>
 
 <?php $this->endSection(); ?>
