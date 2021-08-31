@@ -17,15 +17,15 @@ Options All -Indexes
 	# RewriteBase /
 
 	# Redirect Trailing Slashes...
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_URI} (.+)/$
-	RewriteRule ^ %1 [L,R=301]
+	#RewriteCond %{REQUEST_FILENAME} !-d
+	#RewriteCond %{REQUEST_URI} (.+)/$
+	#RewriteRule ^ %1 [L,R=301]
 
-	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+	#RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    #RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-    RewriteCond %{HTTPS} !on
-    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    #RewriteCond %{HTTPS} !on
+    #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 
 	# Checks to see if the user is attempting to access a valid file,
@@ -34,6 +34,13 @@ Options All -Indexes
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
+
+
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    RewriteCond %{HTTPS} !on
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 	# Ensure Authorization header is passed along
 	RewriteCond %{HTTP:Authorization} .
