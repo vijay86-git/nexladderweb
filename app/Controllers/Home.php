@@ -15,7 +15,7 @@ class Home extends BaseController
 
 	public function index()
 	   { 
-		    $subjects = $this->_subjectobj->select(['name', 'slug', 'image'])->where(['status', 1])->get(); 
+		    $subjects = $this->_subjectobj->select(['name', 'slug', 'image'])->where(['status', 1, 'show_nav' => 1])->get(); 
 		    return view('Frontend/Home', compact('subjects'));
 	   }
 }
