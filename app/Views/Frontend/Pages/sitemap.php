@@ -1,7 +1,7 @@
 <?php echo $this->extend('Frontend/Layouts/Template'); ?>
 <?php echo $this->section('content'); ?>
 
-		  <div class="bodyPart">
+        <div class="bodyPart">
             <div class="row">
                <div class="col-md-12">
                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -28,9 +28,9 @@
                                      <a href="<?php echo route($result['slug']); ?>" title="<?php echo $result['subject'] ?>"><h2><?php echo $result['subject'] ?></h2></a>
                                      <ul>
                                         <?php
-                                          foreach ($result['topics'] as $topics):
+                                          foreach ($result['topics']->getResult() as $topics):
                                        ?>
-                                          <li><a title="<?php echo $topics['topic'] ?>" href="<?php echo topic_route($result['slug'], $topics['slug']); ?>"><?php echo $topics['topic'] ?></a></li>
+                                          <li><a title="<?php echo $topics->topic ?>" href="<?php echo topic_route($result['slug'], $topics->slug); ?>"><?php echo $topics->topic ?></a></li>
                                        <?php
                                          endforeach;
                                        ?>
