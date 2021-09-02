@@ -23,7 +23,7 @@
 define('DB_NAME', 'blog_nexladder_tutorials');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'tutorial');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'Sam572#$');
