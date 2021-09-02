@@ -38,7 +38,7 @@
                         </div>
                      </div>
                      <div class="row" style="height:20px"></div>
-                     <!--<div class="row">
+                     <div class="row">
                         <div class="col-md-5 col-sm-5 text-center">
                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                            
@@ -61,20 +61,20 @@
                               (adsbygoogle = window.adsbygoogle || []).push({});
                            </script>
                         </div>
-                     </div>-->
+                     </div>
                   </div>
                </div>
                <div class="col-md-3 col-sm-3 margin15 pull-left">
                   <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnexladder&tabs&width=340&height=214&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=541506242974269" width="300" height="214" style="border:none;overflow:hidden;margin:10px 0 0 0" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                   
-                  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                   <ins class="adsbygoogle"
                      style="display:inline-block;width:270px;height:600px"
                      data-ad-client="ca-pub-9716398444039739"
                      data-ad-slot="6679889118"></ins>
                   <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>-->
+                  </script>
 
                </div>
             </div>
