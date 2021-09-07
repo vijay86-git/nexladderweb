@@ -8,7 +8,7 @@
                   <div class="row mrgnbtm15">
                      <div class="col-md-12 mrgnbtm15">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <-- Ad 1 -->
+                        <!-- Ad 1 -->
                         <ins class="adsbygoogle"
                            style="display:block"
                            data-ad-client="ca-pub-9716398444039739"
