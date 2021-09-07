@@ -86,9 +86,8 @@
                               <div class="trend_related_container">
                                
                                  <div class="trend_related">
-                                    <p style="color:green;" class="ytct-J5ee5OHIpIY">
+                                    <p style="color:#028002;padding-top:5px;" class="">
                                        <i class="fa fa-eye"></i>:<b><?php echo $viewCount ?></b> Views, <i class="fa fa-thumbs-up"></i>:<b><?php echo $likeCount ?></b> Likes, <i class="fa fa-thumbs-down"></i>:<b><?php echo $dislikeCount ?></b> Dislikes, <i class="fa fa-comments"></i>:<b><?php echo $commentCount ?></b> Comments </p>
-                                    
                                  </div>
 
                                  <p class="show-read-more"><?php echo $trend->description ?></p>
