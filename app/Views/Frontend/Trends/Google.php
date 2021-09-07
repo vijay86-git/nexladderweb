@@ -76,8 +76,8 @@
                                     foreach($trends_related as $trend_info):
                                ?>
                                  <div class="trend_related">
-                                    <div><strong><a target="_blank" href="<?php echo $trend_info->url ?>"><?php echo $trend_info->title ?>&nbsp;<i class="fa fa-external-link">&nbsp;</i></a></strong> <span class="badge">source: <?php echo $trend_info->source ?></span></div>
-                                    <div class="fnt12"><?php echo $trend_info->snipped ?></div>
+                                    <p><strong><a target="_blank" href="<?php echo $trend_info->url ?>"><?php echo $trend_info->title ?>&nbsp;<i class="fa fa-external-link">&nbsp;</i></a></strong> <span class="badge">source: <?php echo $trend_info->source ?></span></p>
+                                    <p class="fnt12"><?php echo $trend_info->snipped ?></p>
                                  </div>
 
                               <?php
