@@ -311,5 +311,5 @@ ul.list-group {height:1086px;overflow-y:scroll}
 .trend_related{height:auto;	line-height:10px;margin-bottom:10px;border:1px dashed #ddd;padding:5px;border-radius:5px;}
 .fnt12{font-size:12px;line-height:20px;}
 .show-read-more .more-text{display:none;line-height:22px}
-.show-read-more a .more-text a{color:#000 !important}
+.read-more{color:#000 !important}
 .st{height:20px;display:inline-block;width:255px;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis}
