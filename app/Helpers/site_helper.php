@@ -194,7 +194,7 @@ if ( ! function_exists("google_trends"))
         		$cal_time           = $now - $google_default_sec;
         		//$trends_res_qry     = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time >=', $cal_time)->where('code', $code)->get();
 
-        		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `twitter_trends` WHERE `create_time` = (SELECT `create_time` FROM `twitter_trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
+        		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
 
         		if($trends_res_qry->getNumRows())
       			return $trends_res_qry->getResult();
