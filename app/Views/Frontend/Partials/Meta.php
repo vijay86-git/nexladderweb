@@ -1,8 +1,8 @@
 	 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       <title>Online Web Development Tutorials | Nexladder</title>
-      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/bootstrap.min.css?v=1.2'); ?>" />
-      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/font-awesome.css?v=1.3'); ?>" />
-      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/style.css?v=1.5'); ?>" />
+      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/bootstrap.min.css?v=1.0.5'); ?>" />
+      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/font-awesome.css?v=1.0.5'); ?>" />
+      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/style.css?v=1.0.5'); ?>" />
       <style>
          .navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-nav>li>a:hover  {color:#FFFFFF;font-size:14px;text-transform:uppercase}
       </style>
