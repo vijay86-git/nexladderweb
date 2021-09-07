@@ -7,8 +7,8 @@
                   <!-- content -->
                   <div class="row mrgnbtm15">
                      <div class="col-md-12 mrgnbtm15">
-                        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        -- Ad 1 --
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <-- Ad 1 -->
                         <ins class="adsbygoogle"
                            style="display:block"
                            data-ad-client="ca-pub-9716398444039739"
@@ -16,7 +16,7 @@
                            data-ad-format="auto"></ins>
                         <script>
                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>-->
+                        </script>
                      </div>
                   </div>
 
@@ -65,15 +65,15 @@
 
                   <div class="row mrgnTpBtm">
                      <div class="col-md-12">
-                        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        !-- Ad 3 --
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- Ad 3 -->
                         <ins class="adsbygoogle"
                            style="display:inline-block;width:728px;height:90px"
                            data-ad-client="ca-pub-9716398444039739"
                            data-ad-slot="9117871264"></ins>
                         <script>
                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>-->
+                        </script>
                      </div>
                   </div>
 
@@ -124,15 +124,15 @@
 
                <div class="col-md-3">
 
-                  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                  !-- Ad 7 --
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <!-- Ad 7 -->
                   <ins class="adsbygoogle"
                      style="display:inline-block;width:270px;height:600px"
                      data-ad-client="ca-pub-9716398444039739"
                      data-ad-slot="5997201134"></ins>
                   <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>-->
+                  </script>
                </div>
 
 

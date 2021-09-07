@@ -4,7 +4,7 @@
             <div class="row">
                <div class="col-md-3">
 
-                   <p class="st"><a title="Home" href='<?php echo route_to('/') ?>'><i class="fa fa-home">&nbsp;</i></a>&raquo;&nbsp;<a title="Youtube Trends" href="<?= route_to('youtube_trends') ?>">Youtube Trends</a> &raquo;&nbsp;India United states of america</p>
+                   <p class="st" style="display:none"><a title="Home" href='<?php echo route_to('/') ?>'><i class="fa fa-home">&nbsp;</i></a>&raquo;&nbsp;<a title="Youtube Trends" href="<?= route_to('youtube_trends') ?>">Youtube Trends</a> &raquo;&nbsp;India United states of america</p>
                    <div class="search-box">
                      
                      <input class="form-control brdernone" name="tools_search" id="search-tools" class="search-tool-holder" placeholder="Search Country..." type="text" onkeyup="return myFunc()" /><i class="fa fa-search"></i>
@@ -104,12 +104,6 @@
                      endforeach;
                    endif;
                   ?>
-
-
-
-
-
-                  
 
                   <div class="row mrgnTpBtm">
                      <div class="col-md-12">
