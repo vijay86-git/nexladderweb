@@ -307,8 +307,8 @@ ul.list-group {height:1086px;overflow-y:scroll}
 .google_trend_heading{font-size:18px;font-weight:bold;margin-right:10px}
 .mrgnbtm35{margin-bottom:35px;}
 .trend_related_container{}
-.trend_related{height:40px;line-height:26px;margin-bottom:10px;border:1px dashed #ddd;padding:5px;border-radius:5px;}
-.fnt12{font-size:12px}
+.trend_related{height:auto;	line-height:10px;margin-bottom:10px;border:1px dashed #ddd;padding:5px;border-radius:5px;}
+.fnt12{font-size:12px;line-height:20px;}
 .show-read-more .more-text{display:none}
 .st{height:20px;display:inline-block;width:255px;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis}
 
