@@ -1,3 +1,6 @@
+.env
+app/
+
 #-------------------------
 # Operating Specific Junk Files
 #-------------------------

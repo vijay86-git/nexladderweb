@@ -66,6 +66,17 @@ $routes->get('/youtube_api', 'Api::youtube_api', ['as' => 'youtube_api.json']);
 $routes->get('/twitter', 'Api::twitter', ['as' => 'twitter.json']);
 $routes->get('/twitter_api', 'Api::twitter_api', ['as' => 'twitter_api.json']);
 
+$routes->get('/google-trends', 'Trends::google', ['as' => 'google_trends']);
+$routes->get('/google-trends/(:any)', 'Trends::google/$1', ['as' => 'google_trends_country']);
+
+
+$routes->get('/youtube-trends', 'Trends::youtube', ['as' => 'youtube_trends']);
+$routes->get('/youtube-trends/(:any)', 'Trends::youtube/$1', ['as' => 'youtube_trends_country']);
+
+$routes->get('/twitter-trends', 'Trends::twitter', ['as' => 'twitter_trends']);
+$routes->get('/twitter-trends/(:any)', 'Trends::twitter/$1', ['as' => 'twitter_trends_country']);
+$routes->get('/twitter-trends/(:any)/(:any)', 'Trends::twitter/$1/$2', ['as' => 'twitter_trends_country_place']);
+
 
 
 $routes->get('/(:any)/(:any)', 'Page::topics/$1/$2', ['as' => 'topic.detail']);
