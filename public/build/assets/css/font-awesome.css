@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
-  src: url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('http://dev.nexladder.local:8001/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://nexladder.com/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
