@@ -83,6 +83,7 @@
                                 <span class="google_trends_badge">Upload by: <?php echo $trend->channel_title ?> <?php echo $uploaded_on_time ?></span>
                               </div>
 
+
                               <div class="trend_related_container">
                                
                                  <div class="trend_related">
