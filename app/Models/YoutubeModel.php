@@ -9,6 +9,6 @@ class YoutubeModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'published_at', 'stats', 'created_at'];
+    protected $allowedFields = ['yt_id', 'code', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'published_at', 'stats', 'created_at'];
 
  }

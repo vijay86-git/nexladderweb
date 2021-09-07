@@ -9,6 +9,17 @@
    <body>
       <!-- Page Wrapper -->
       <!-- <div class="pageWrapper"  style="background:url(images/pexels-photo-574071.jpeg);background-repeat:no-repeat;background-position:top center;background-size:1600px auto">-->
+
+      <div class="headerTop">
+         <div class="container headerLink">
+          <ul>
+             <li><a title="Google Trends" href="<?php echo route_to('google_trends') ?>">Google Trends</a> | </li>
+             <li><a title="Youtube Trends" href="<?php echo route_to('youtube_trends') ?>">Youtube Trends</a> | </li>
+             <li><a title="Twitter Trends" href="<?php echo route_to('twitter_trends') ?>">Twitter Trends</a></li>
+          </ul>
+         </div>
+      </div>
+
       <div class="pageWrapper" style="background:url(<?php echo loadImage('banner.png'); ?>);background-repeat:no-repeat;background-position:center center;">
          <!-- Container -->
          <div class="container">

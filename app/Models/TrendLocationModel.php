@@ -9,6 +9,6 @@ class TrendLocationModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['name', 'place_type', 'url', 'parent_id', 'country', 'woeid', 'country_code', 'create_time'];
+    protected $allowedFields = ['alias','name', 'place_type', 'url', 'parent_id', 'country', 'woeid', 'country_code', 'create_time'];
 
  }

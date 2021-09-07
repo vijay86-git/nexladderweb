@@ -9,5 +9,5 @@ class TrendModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['code', 'date_format', 'title', 'image', 'news_url', 'source', 'create_time'];
+    protected $allowedFields = ['code', 'date_format', 'title', 'image', 'news_url', 'source', 'create_time', 'formattedTraffic'];
  }

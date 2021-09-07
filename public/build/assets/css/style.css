@@ -2,13 +2,13 @@
 	  font-family: 'Open Sans';
 	  font-style: normal;
 	  font-weight: 400;
-	  src: url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+	  src: url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
 	  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-		   url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		   url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-		   url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-		   url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-		   url('https://nexladder.com/fonts/webfont/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+		   url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		   url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		   url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+		   url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		   url('http://dev.nexladder.local:8001/fonts/webfont/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 	}
 table caption.summary{font-size:18px;font-weight:bold;text-align:center}
 .pageWrapper{float:left;width:100%;height:100%}
@@ -238,3 +238,77 @@ ol.code li{list-style-type:none;padding:0 0 0 10px;}
 .btn-code, .btn-code:hover {background-color:#11a286;border-color:#0e9279;padding:8px 20px;color:#fff}
 .btn-code a {color:#fff !important}
 .homeclr{color:#fff !important;}
+
+.headerTop { height:40px; line-height:40px; background: #11a286; }
+.headerLink { text-align:right; }
+.headerLink ul {margin:0;padding: 0}
+.headerLink ul li{display:inline;}
+.headerLink ul li a{color: #fff;font-size:14px; padding:5px 15px;}
+
+ul li.list-group-item span{padding-left:5px}
+ul li.list-group-item a i{margin-right:15px}
+
+.search-box i {
+    position: absolute;
+    right: 30px;
+    color: #505763;
+    outline: 0;
+    top:39px;
+    transition: .3s;
+}
+.brdernone{border-radius:2px;border-bottom:0;font-size:13px}
+.brdernone, .list-group-item:first-child{border-radius:2px}
+ul.list-group {height:1086px;overflow-y:scroll}
+.bggry{background:#f9f9f9}
+.shadow-box{box-shadow:5px 10px #f7f7f7;border: 1px solid #ddd;border-radius:10px;padding:10px}
+.imgset{border-radius:3px;border:1px solid #f7f7f7;padding:0px}
+.imgset img{object-fit:cover;height:220px}
+.google_trends_badge{background:#f4f4f5;font-size:12px;padding:3px 8px;border-radius:25px;border: 1px solid #ddd}
+.google_trends_info{margin-bottom:5px;padding-bottom: 10px;border-bottom:1px dashed #ddd;}
+.google_trend_heading{font-size:18px;font-weight:bold;margin-right:10px}
+.mrgnbtm35{margin-bottom:35px;}
+.trend_related_container{}
+.trend_related{margin-bottom:10px;border:1px dashed #ddd;padding:5px;border-radius:5px;}
+.fnt12{font-size:12px}
+.st{height:20px;display:inline-block;width:255px;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis}
+
+.show-read-more .more-text{display:none}
+.twitterloc{padding-bottom:12px}
+.twitr_lc{ margin: 15px 0}
+.twitr_lc h3{ font-size:20px;font-weight:bold;text-decoration:underline;}
+.twtr_sub_loc{padding:10px 0 10px 25px}
+.twtrtp{border:1px dashed #ddd;border-radius:5px;padding:15px}
+.twitterloc{padding:20px}
+.mrgntp20{margin-top:20px;}
+.brdrbtm{border-bottom:1px dashed #ddd;}
+.panel-title{text-align:center;font-size:25px;font-weight:bold}
+
+
+ul li.list-group-item span{padding-left:5px}
+ul li.list-group-item a i{margin-right:15px}
+
+.search-box i {
+    position: absolute;
+    right: 30px;
+    color: #505763;
+    outline: 0;
+    top:39px;
+    transition: .3s;
+}
+.brdernone{border-radius:2px;border-bottom:0;font-size:13px}
+.brdernone, .list-group-item:first-child{border-radius:2px}
+ul.list-group {height:1086px;overflow-y:scroll}
+.bggry{background:#f9f9f9}
+.shadow-box{box-shadow:5px 10px #f7f7f7;border: 1px solid #ddd;border-radius:10px;padding:10px}
+.imgset{border-radius:3px;border:1px solid #f7f7f7;padding:0px}
+.imgset img{object-fit:cover;height:220px}
+.google_trends_badge{background:#f4f4f5;font-size:12px;padding:3px 8px;border-radius:25px;border: 1px solid #ddd}
+.google_trends_info{margin-bottom:5px;padding-bottom: 10px}
+.google_trend_heading{font-size:18px;font-weight:bold;margin-right:10px}
+.mrgnbtm35{margin-bottom:35px;}
+.trend_related_container{}
+.trend_related{height:40px;line-height:26px;margin-bottom:10px;border:1px dashed #ddd;padding:5px;border-radius:5px;}
+.fnt12{font-size:12px}
+.show-read-more .more-text{display:none}
+.st{height:20px;display:inline-block;width:255px;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis}
+

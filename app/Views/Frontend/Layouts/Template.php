@@ -28,4 +28,6 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="<?php echo loadAssetsFiles('build/assets/js/bootstrap.min.js?v=1'); ?>"></script>
    </body>
+
+   <?php echo $this->renderSection('js') ?>
 </html>
