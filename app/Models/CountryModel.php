@@ -9,6 +9,6 @@ class CountryModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['code', 'title', 'status', 'alias'];
+    protected $allowedFields = ['code', 'title', 'status', 'alias', 'youtube_status', 'google_status'];
 
  }

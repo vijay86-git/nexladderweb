@@ -56,7 +56,7 @@ class GTrends
             return Json\Json::decode(trim(substr($dataJson, 5)), Json\Json::TYPE_ARRAY);
         } catch (\Exception $e) {
 
-            die($e->getMessage());
+            throw new \ErrorException($e->getMessage());
         }
     }
 

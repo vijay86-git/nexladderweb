@@ -206,8 +206,20 @@ if ( ! function_exists("google_trends"))
 	            		   ];
 
 		        $time = time();
-	          	$gt   = new GTrends($options);
-		        $get_daily_search_trends = $gt->getDailySearchTrends();
+
+		        try
+		         {
+		         	$gt   = new GTrends($options);
+		        	$get_daily_search_trends = $gt->getDailySearchTrends();
+		         }
+
+		        catch(Exception $e)
+		         {
+		         	$countries->where(['code' => $code])->set('google_status', 0)->update();
+            		$link =  route_to('google_trends');
+            		header("Location:" . $link);
+		         }
+	          	
 		        if(isset($get_daily_search_trends['default']['trendingSearchesDays']))
 		         {
 		             $trendingSearchesDays = $get_daily_search_trends['default']['trendingSearchesDays'];
@@ -332,7 +344,7 @@ if ( ! function_exists("youtube_trends"))
              }
 
             if($flag):
-            	$countries->where(['code' => $code])->set('status', 0)->update();
+            	$countries->where(['code' => $code])->set('youtube_status', 0)->update();
             	$link =  route_to('youtube_trends');
             	header("Location:" . $link);
             	exit;
