@@ -57,6 +57,7 @@ class GTrends
         } catch (\Exception $e) {
 
             throw new \ErrorException($e->getMessage());
+            
         }
     }
 
