@@ -175,7 +175,7 @@ if ( ! function_exists("google_trends"))
    {
      function google_trends($alias = "")
 		    {		
-				$db       		   	    = getDbObject();
+				$db       		   	      = getDbObject();
 				$countries              = $db->table('countries');
 
 				$trends                 = new TrendModel();
@@ -183,23 +183,34 @@ if ( ! function_exists("google_trends"))
 
 				if(empty($alias)):
 				 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
+				 $title               = "India";
 				else:
-				 $country_obj 			= $countries->select(['code'])->where('alias', $alias)->get()->getRow();
+				 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
 				 if(isset($country_obj->code))
-				 $code                  = $country_obj->code;
+				 	 {
+				 	 		$code           = $country_obj->code;
+						  $title          = $country_obj->title;
+				 	 }
 				   else
-				 return [];
+				     {
+				     	return [];
+				     }
 				endif;
+
+				  $data['name']       = ucwords($title);
 
 	    		$google_default_sec = getenv('GOOGLE_DEFAULT_TIME_SEC');
 	    		$now                = time();
         		$cal_time           = $now - $google_default_sec;
         		//$trends_res_qry     = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time >=', $cal_time)->where('code', $code)->get();
 
-        		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
+        		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE (`code` = '".$code."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
 
-        		if($trends_res_qry->getNumRows())
-      			return $trends_res_qry->getResult();
+        		$data['results']   = [];
+        		if($trends_res_qry->getNumRows()):
+      			 $data['results']  = $trends_res_qry->getResult();
+      			 return $data;
+      			endif;
 
 	        	$options = [
 				                'hl'  => 'en-GB',
@@ -217,9 +228,10 @@ if ( ! function_exists("google_trends"))
 
 		        catch(Exception $e)
 		         {
-		         	$countries->where(['code' => $code])->set('google_status', 0)->update();
+		         	  $countries->where(['code' => $code])->set('google_status', 0)->update();
             		$link =  route_to('google_trends');
             		header("Location:" . $link);
+            		exit;
 		         }
 	          	
 		        if(isset($get_daily_search_trends['default']['trendingSearchesDays']))
@@ -291,11 +303,12 @@ if ( ! function_exists("google_trends"))
 		             endif;
 		    		}
 
-		    $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
+		        
+		        $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
             if($trends_res_qry->getNumRows())
-            return $trends_res_qry->getResult();
-              else
-            return [];
+            $data['results'] = $trends_res_qry->getResult();
+
+            return $data;
 		 } 
 	}
 

@@ -25,9 +25,11 @@ class Trends extends BaseController
 
 	public function google($alias = '')
 	  {  
-	  	 $results   =  google_trends($alias);
-	  	 $countries = $this->_countryobj->select(['id', 'alias', 'title'])->where(['google_status' => '1'])->get();
-		 return view('Frontend/Trends/Google', compact('countries', 'results'));
+	  	 $results_arr   =  google_trends($alias);
+	  	 $name          =  $results_arr['name'];
+	  	 $results       =  $results_arr['results'];
+	  	 $countries     = $this->_countryobj->select(['id', 'alias', 'title'])->where(['google_status' => '1'])->get();
+		 return view('Frontend/Trends/Google', compact('countries', 'results', 'name'));
 	  }	
 
 	public function youtube($alias = '')
