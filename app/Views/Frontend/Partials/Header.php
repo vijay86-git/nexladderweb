@@ -1,7 +1,7 @@
 		<!-- Top Bar -->
             <div class="topBar">
                <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                      <div class="social">
                         <ul>
                            <li><a target="_blank" href="<?php echo getenv('socal.facebook_url') ?>" title="facebook"><i class="fa fa-facebook homeclr" aria-hidden="true"></i></a></li>
@@ -10,34 +10,16 @@
                         </ul>
                      </div>
                   </div>
-
-
-                  <div class="col-md-8">
-                     <div class="col-md-12">
-                        <div class="col-md-6 inner">
-                           <ul>
-                               <li><a target="_blank" title="Google Trends" href="<?php echo route_to('google_trends') ?>">Google Trends</a> | </li>
-                               <li><a target="_blank" title="Youtube Trends" href="<?php echo route_to('youtube_trends') ?>">Youtube Trends</a> | </li>
-                               <li><a target="_blank" title="Twitter Trends" href="<?php echo route_to('twitter_trends') ?>">Twitter Trends</a></li>
-                            </ul>
-                        </div>
-
-                       <div class="col-md-6">
-                          <div class="searchbar text-right">
-                            <!-- form search -->
-
-                             <form method="get" action="https://www.google.com/search" target="_blank"> 
-                                <input autocomplete="off" type="text" class="searchTextTop" name="q" placeholder="Search on Nexladder..." title="Search on Nexladder"><button class="magnifier"><i class="fa fa-search"></i></button>
-                                <input type="hidden" name="sitesearch" value="https://nexladder.com">
-                              </form>
-
-                            <!-- close -->
-                           </div>
-                       </div>
-                    </div>
-               </div>
-
-
+                  <div class="col-md-6">
+                     <div class="searchbar text-right">
+                        <!-- form search -->
+                        <form method="get" action="https://www.google.com/search" target="_blank">
+                           <input autocomplete="off" type="text" class="searchTextTop" name="q" placeholder="Search on Nexladder..." title="Search on Nexladder" /><button class="magnifier"><i class="fa fa-search"></i></button>
+                           <input type="hidden" name="sitesearch" value="https://nexladder.com" />
+                        </form>
+                        <!-- close -->
+                     </div>
+                  </div>
                </div>
                <div class="seperator">&nbsp;</div>
             </div>
