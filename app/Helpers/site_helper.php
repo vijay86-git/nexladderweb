@@ -111,7 +111,9 @@ if ( ! function_exists("twitter_trends"))
       	    $now                  =  time();
         	$cal_time             =  $now - $twitter_default_sec;
 
-      	    $trends_res_qry       =  $twitter_trends->select(['id', 'name', 'url', 'tweet_volume'])->where('create_time >=', $cal_time)->where('woeid', $woeid)->get();
+      	    //$trends_res_qry       =  $twitter_trends->select(['id', 'name', 'url', 'tweet_volume'])->where('create_time >=', $cal_time)->where('woeid', $woeid)->get();
+
+      	    $trends_res_qry       =  $twitter_trends->query("SELECT `id`, `name`, `url`, `tweet_volume` FROM `twitter_trends` WHERE `create_time` = (SELECT `create_time` FROM `twitter_trends` WHERE `woeid` = '".$woeid."' ORDER BY `id` DESC LIMIT 1)");
 
         	if($trends_res_qry->getNumRows()):
         	$arr['result']        =  $trends_res_qry->getResultArray();
@@ -319,7 +321,10 @@ if ( ! function_exists("youtube_trends"))
     		$google_default_sec = getenv('GOOGLE_DEFAULT_TIME_SEC');
     		$now                = time();
         	$cal_time           = $now - $google_default_sec;
-        	$trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at >=', $cal_time)->where('code', $code)->get();
+        	
+        	//$trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at >=', $cal_time)->where('code', $code)->get();
+
+        	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
 
             if($trends_res_qry->getNumRows())
           	return $trends_res_qry->getResult();
