@@ -11,7 +11,7 @@
       <!-- Page Wrapper -->
       <!-- <div class="pageWrapper"  style="background:url(images/pexels-photo-574071.jpeg);background-repeat:no-repeat;background-position:top center;background-size:1600px auto">-->
 
-      <div class="headerTop" style="display:none">
+      <div class="headerTop">
          <div class="container headerLink">
           <ul>
              <li><a title="Google Trends" href="<?php echo route_to('google_trends') ?>">Google Trends</a> | </li>
