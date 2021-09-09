@@ -14,9 +14,9 @@
       <div class="headerTop">
          <div class="container headerLink">
           <ul>
-             <li><a title="Google Trends" href="<?php echo route_to('google_trends') ?>">Google Trends</a> | </li>
-             <li><a title="Youtube Trends" href="<?php echo route_to('youtube_trends') ?>">Youtube Trends</a> | </li>
-             <li><a title="Twitter Trends" href="<?php echo route_to('twitter_trends') ?>">Twitter Trends</a></li>
+             <li><a target="_blank" title="Google Trends" href="<?php echo route_to('google_trends') ?>">Google Trends</a> | </li>
+             <li><a target="_blank" title="Youtube Trends" href="<?php echo route_to('youtube_trends') ?>">Youtube Trends</a> | </li>
+             <li><a target="_blank" title="Twitter Trends" href="<?php echo route_to('twitter_trends') ?>">Twitter Trends</a></li>
           </ul>
          </div>
       </div>

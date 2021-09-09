@@ -313,3 +313,7 @@ ul.list-group {height:1086px;overflow-y:scroll}
 .show-read-more .more-text{display:none;line-height:22px}
 .read-more{color:#000 !important}
 .st{height:20px;display:inline-block;width:255px;white-space:nowrap;overflow:hidden !important;text-overflow:ellipsis}
+
+.inner{line-height:38px;}
+.inner ul {margin: 0;padding: 0}
+.inner ul li{list-style-type:none;display:inline;}
