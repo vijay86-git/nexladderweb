@@ -1,7 +1,7 @@
 		<!-- Top Bar -->
             <div class="topBar">
                <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4">
                  <div class="socialinner">
                   <ul>
                      <li><a href="<?php echo getenv('socal.facebook_url') ?>" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -12,7 +12,7 @@
               </div>
 
 
-              <div class="col-md-7">
+              <div class="col-md-8">
                   <div class="col-md-12">
                         <div class="col-md-6 inner">
                            <ul>
