@@ -1,5 +1,5 @@
 	 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <title>Online Web Development Tutorials | Nexladder</title>
+      <title><?php echo isset($page_title) ? $page_title : "Online Web Development Tutorials | Nexladder" ?></title>
       <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/bootstrap.min.css?v=1.0.5'); ?>" />
       <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/font-awesome.css?v=1.0.5'); ?>" />
       <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/style.css?v=1.1.4'); ?>" />
@@ -14,7 +14,7 @@
       <![endif]-->
       <meta name="msvalidate.01" content="F13063B8299624F18B7C4E98367AE3E1" />
       <meta name="description" content="Free Online Tutorials, Tutorials Online, nexladder provides tutorials like php tutorial, ajax, mysql etc for beginners and professionals." />
-      <meta name="keywords" content="nexladder, php tutorial, mysql tutorial and more for beginners and professionals" />
+      <meta name="keywords" content="<?php echo isset($page_keywords) ? $page_keywords : "nexladder, php tutorial, mysql tutorial and more for beginners and professionals" ?>" />
       <link rel="canonical" href="https://nexladder.com" />
       <meta property="og:image" content="https://nexladder.com/images/nexsharelogo.png" />
       <meta property="og:title" content="Nexladder Online Web Tutorials" />

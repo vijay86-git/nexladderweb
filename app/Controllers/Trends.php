@@ -26,10 +26,12 @@ class Trends extends BaseController
 	public function google($alias = '')
 	  {  
 	  	 $results_arr   =  google_trends($alias);
-	  	 $name          =  $results_arr['name'];
+	  	 $name          =  ucwords($results_arr['name']);
 	  	 $results       =  $results_arr['results'];
-	  	 $countries     = $this->_countryobj->select(['id', 'alias', 'title'])->where(['google_status' => '1'])->get();
-		 return view('Frontend/Trends/Google', compact('countries', 'results', 'name'));
+	  	 $page_title    =  $name . " Google Trends - Today's google trending search keywords in " . $name;
+	  	 $page_keywords =  "$name google trends, google trends in $name, trending in $name"; 
+	  	 $countries     =  $this->_countryobj->select(['id', 'alias', 'title'])->where(['google_status' => '1'])->get();
+		 return view('Frontend/Trends/Google', compact('countries', 'results', 'name', 'page_title', 'page_keywords'));
 	  }	
 
 	public function youtube($alias = '')
