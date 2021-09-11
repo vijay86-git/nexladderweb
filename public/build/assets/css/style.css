@@ -298,7 +298,7 @@ ul li.list-group-item a i{margin-right:15px}
 }
 .brdernone{border-radius:2px;border-bottom:0;font-size:13px}
 .brdernone, .list-group-item:first-child{border-radius:2px}
-ul.list-group {height:1086px;overflow-y:scroll}
+ul.list-group-list {height:1086px;overflow-y:scroll}
 .bggry{background:#f9f9f9}
 .shadow-box{box-shadow:5px 10px #f7f7f7;border: 1px solid #ddd;border-radius:10px;padding:10px}
 .imgset{border-radius:3px;border:1px solid #f7f7f7;padding:0px}

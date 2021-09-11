@@ -2,7 +2,7 @@
       <title>Online Web Development Tutorials | Nexladder</title>
       <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/bootstrap.min.css?v=1.0.5'); ?>" />
       <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/font-awesome.css?v=1.0.5'); ?>" />
-      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/style.css?v=1.1.3'); ?>" />
+      <link rel="stylesheet" href="<?php echo loadAssetsFiles('build/assets/css/style.css?v=1.1.4'); ?>" />
       <style>
          .navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-nav>li>a:hover  {color:#FFFFFF;font-size:14px;text-transform:uppercase}
       </style>

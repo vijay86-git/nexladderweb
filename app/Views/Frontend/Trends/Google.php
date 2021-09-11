@@ -11,7 +11,7 @@
                    </div>
                     <?php 
                       if($countries->getNumRows()):
-                         echo '<ul class="list-group" id="countries_list">';
+                         echo '<ul class="list-group-list" id="countries_list">';
                          $i = 0;
                          foreach ($countries->getResult() as $country):
                          $cls = $i % 2 == 0 ? 'bggry' : '';
