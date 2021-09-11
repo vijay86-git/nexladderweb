@@ -49,14 +49,11 @@
                      </div>
                   </div>
 
-
                   <div class="sec-head-row text-center">
                      <div class="sec-head">
                         <h1 class="page-title" itemprop="headline"><?php echo $name ?> Youtube Trends <span style="color:green;font-size:16px;"><?php echo date("M, d Y"); ?></span></h1>
                      </div>
                   </div>
-
-
 
                   <?php
                    $no_image = loadImage('no_image.png');
