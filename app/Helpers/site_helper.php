@@ -183,12 +183,12 @@ if ( ! function_exists("google_trends"))
 
 				if(empty($alias)):
 				 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
-				 $title               = "India";
+				 $title                 = "India";
 				else:
 				 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
 				 if(isset($country_obj->code))
 				 	 {
-				 	 		$code           = $country_obj->code;
+				 	 	  $code           = $country_obj->code;
 						  $title          = $country_obj->title;
 				 	 }
 				   else
@@ -323,13 +323,20 @@ if ( ! function_exists("youtube_trends"))
 
     	    if(empty($alias)):
     			 $code        			  = getenv('GOOGLE_DEFAULT_TRENDS');
+    			 $title                   = "India";
     	    else:
-    			 $country_obj 			  = $countries->select(['code'])->where('alias', $alias)->get()->getRow();
-    			 if(isset($country_obj->code))
-	             $code                	  = $country_obj->code;
-	               else
-	              return [];
+    			 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+    			 if(isset($country_obj->code)) {
+	               $code                  = $country_obj->code;
+	               $title                 = $country_obj->title;
+	             }
+	             else
+	               	 {
+	               	 	return [];
+	               	 }
 		    endif;
+
+		    $data_res['name']   = ucwords($title);
 
     		$google_default_sec = getenv('GOOGLE_DEFAULT_TIME_SEC');
     		$now                = time();
@@ -339,8 +346,12 @@ if ( ! function_exists("youtube_trends"))
 
         	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
 
-            if($trends_res_qry->getNumRows())
-          	return $trends_res_qry->getResult();
+        	$data_res['results'] = [];
+
+            if($trends_res_qry->getNumRows()):
+          	$data_res['results'] = $trends_res_qry->getResult();
+          	return $data_res;
+          	endif;
 
             $time 					   =  time();
 
@@ -410,9 +421,9 @@ if ( ! function_exists("youtube_trends"))
 		    $trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at', $time)->where('code', $code)->get();
 
             if($trends_res_qry->getNumRows())
-            return $trends_res_qry->getResult();
-              else
-            return [];
+            $data_res['results'] = $trends_res_qry->getResult();
+
+        	return $data_res;
 		}
  }
 

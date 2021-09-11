@@ -36,9 +36,17 @@ class Trends extends BaseController
 
 	public function youtube($alias = '')
 	  {  
-	  	 $results   =  youtube_trends($alias);
-	  	 $countries =  $this->_countryobj->select(['id', 'alias', 'title'])->where(['youtube_status' => '1'])->get();
-		 return view('Frontend/Trends/Youtube', compact('countries', 'results'));
+	  	 $results_arr   =  youtube_trends($alias);
+
+	  	 $countries     =  $this->_countryobj->select(['id', 'alias', 'title'])->where(['youtube_status' => '1'])->get();
+
+	  	 $name          =  $results_arr['name'];
+	  	 $results       =  $results_arr['results'];
+
+	  	 $page_title    =  $name . " Youtube Trends - Today's youtube trending search keywords in " . $name;
+	  	 $page_keywords =  "$name youtube trends, youtube trends in $name, trending in $name"; 
+
+		 return view('Frontend/Trends/Youtube', compact('countries', 'results', 'name', 'page_title', 'page_keywords'));
 	  }
 
 	public function twitter($country = '', $place = "")
