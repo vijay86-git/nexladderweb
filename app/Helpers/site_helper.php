@@ -344,7 +344,7 @@ if ( ! function_exists("youtube_trends"))
         	
         	//$trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at >=', $cal_time)->where('code', $code)->get();
 
-        	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)");
+        	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE (`code` = '".$code."' AND `created_at` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
 
         	$data_res['results'] = [];
 
