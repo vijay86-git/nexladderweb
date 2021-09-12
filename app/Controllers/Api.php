@@ -37,6 +37,13 @@ class Api extends BaseController
         }
 
 
+     public function usersJson()
+      {
+           $users = [["name" => "Dennis Ritchie"],["name" => "James Gosling"],["name" => "Bjarne Stroustrup"],["name" => "Brian Kernighan"],["name" => "Linus Torvalds"]];
+           return $this->response->setJson($res_arr);
+      }
+
+
     public function twitter()
      {
         $settings = array(

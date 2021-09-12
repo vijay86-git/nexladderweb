@@ -77,7 +77,7 @@ $routes->get('/twitter-trends', 'Trends::twitter', ['as' => 'twitter_trends']);
 $routes->get('/twitter-trends/(:any)', 'Trends::twitter/$1', ['as' => 'twitter_trends_country']);
 $routes->get('/twitter-trends/(:any)/(:any)', 'Trends::twitter/$1/$2', ['as' => 'twitter_trends_country_place']);
 
-
+$routes->get('/users.json', 'Api::usersJson', ['as' => 'users.json']);
 
 $routes->get('/(:any)/(:any)', 'Page::topics/$1/$2', ['as' => 'topic.detail']);
 $routes->get('/(:any)', 'Page::subject/$1');
