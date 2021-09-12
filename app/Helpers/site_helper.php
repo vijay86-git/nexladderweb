@@ -113,7 +113,7 @@ if ( ! function_exists("twitter_trends"))
 
       	    //$trends_res_qry       =  $twitter_trends->select(['id', 'name', 'url', 'tweet_volume'])->where('create_time >=', $cal_time)->where('woeid', $woeid)->get();
 
-      	    $trends_res_qry       =  $twitter_trends->query("SELECT `id`, `name`, `url`, `tweet_volume` FROM `twitter_trends` WHERE `create_time` = (SELECT `create_time` FROM `twitter_trends` WHERE `woeid` = '".$woeid."' ORDER BY `id` DESC LIMIT 1)");
+      	    $trends_res_qry       =  $twitter_trends->query("SELECT `id`, `name`, `url`, `tweet_volume` FROM `twitter_trends` WHERE `create_time` = (SELECT `create_time` FROM `twitter_trends` WHERE (`woeid` = '".$woeid."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
 
         	if($trends_res_qry->getNumRows()):
         	$arr['result']        =  $trends_res_qry->getResultArray();
