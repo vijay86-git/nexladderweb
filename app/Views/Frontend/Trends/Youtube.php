@@ -84,7 +84,7 @@
                            </div>
                            <div class="col-md-9 googletrends">
                               <div class="google_trends_info">
-                                <h2 class="google_trend_heading"><a href="<?php echo $link ?>"><?php echo $trend->title ?>:</a></h2> 
+                                <h2 class="google_trend_heading"><a target="_blank" href="<?php echo $link ?>"><?php echo $trend->title ?>:</a></h2> 
                                 <span class="google_trends_badge">Upload by: <?php echo $trend->channel_title ?> <?php echo $uploaded_on_time ?></span>
                               </div>
 

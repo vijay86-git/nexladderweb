@@ -71,8 +71,8 @@
                            <div class="col-md-9 googletrends">
 
                               <div class="google_trends_info">
-                                <span class="google_trend_heading"><a href="<?php echo $trend->news_url ?>"><?php echo $trend->title ?>:</a></span> 
-                                <span class="google_trends_badge"><a href="<?php echo $trend->news_url ?>"><?php echo $trend->formattedTraffic ?></a></span>
+                                <span class="google_trend_heading"><a target="_blank" href="<?php echo $trend->news_url ?>"><?php echo $trend->title ?>:</a></span> 
+                                <span class="google_trends_badge"><a target="_blank" href="<?php echo $trend->news_url ?>"><?php echo $trend->formattedTraffic ?></a></span>
                               </div>
 
 
