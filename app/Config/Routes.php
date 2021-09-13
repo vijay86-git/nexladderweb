@@ -79,6 +79,24 @@ $routes->get('/twitter-trends/(:any)/(:any)', 'Trends::twitter/$1/$2', ['as' => 
 
 $routes->get('/users.json', 'Api::usersJson', ['as' => 'users.json']);
 
+
+$routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+
+    $routes->get('/', 'Auth::index', ['as' => 'admin.get.login']);
+    $routes->post('login', 'Auth::login', ['as' => 'admin.post.login']);
+    $routes->get('dashboard', 'Dashboard::index', ['as' => 'admin.dashboard.index']);
+
+    $routes->get('forgot-password', 'Auth::forgot', ['as' => 'admin.forgot.index']);
+
+    $routes->post('forgot', 'Auth::forgotPassword', ['as' => 'admin.post.forgot']);
+
+    $routes->get('logout', 'Dashboard::logout', ['as' => 'admin.dashboard.logout']);
+
+
+});
+
+
+
 $routes->get('/(:any)/(:any)', 'Page::topics/$1/$2', ['as' => 'topic.detail']);
 $routes->get('/(:any)', 'Page::subject/$1');
 

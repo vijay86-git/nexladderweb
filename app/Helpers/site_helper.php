@@ -10,6 +10,31 @@ use App\Libraries\TwitterAPIExchange;
 use App\Models\TrendLocationModel;
 
 
+if (! function_exists('check_admin_logged_in')) {
+    function check_admin_logged_in() {
+
+    	$session = \Config\Services::session();
+    	if (! empty($session->admin_id))
+	    	{
+	    		 $route_name = route_to('admin.dashboard.index');
+	    		 page_redirect($route_name);
+	    	}
+    }
+}
+
+if (! function_exists('check_admin_logged_out')) {
+    function check_admin_logged_out() {
+
+    	$session = \Config\Services::session();
+    	if (empty($session->admin_id))
+	    	{
+	    		$route_name = route_to('admin.get.login');
+                page_redirect($route_name);
+	    	}
+    }
+}
+
+
 if ( ! function_exists("number_format_short")) 
   {
 		function number_format_short($n, $precision = 1) {

@@ -1,5 +1,7 @@
 <?php
 
+defined('DOC_ROOT_BACKEND_CSS') || define('DOC_ROOT_BACKEND_CSS', '/Users/user/nexladderweb/public/backend/assets/css/');
+defined('DOC_ROOT_BACKEND_JS')  || define('DOC_ROOT_BACKEND_JS', '/Users/user/nexladderweb/public/backend/assets/js/');
 /*
  | --------------------------------------------------------------------
  | App Namespace
