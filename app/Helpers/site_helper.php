@@ -148,35 +148,44 @@ if ( ! function_exists("twitter_trends"))
       	    $twittertrends  =  new TrendLocationModel();
       	    $twitter_trends =  new TwitterTrendsModel();
 
-      	    if( ! empty($place)):
-      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $place])->get();
-      	    else:
-      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $country])->get();
-      	    endif;
+      	    if(! empty($country) OR ! empty($place)) 
+      	      {
+      	      	if( ! empty($place)):
+		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $place])->get();
+		      	    else:
+		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $country])->get();
+		      	    endif;
 
-      	    if($loc_qry->getNumRows()):
-      	    	$loc_obj     =  $loc_qry->getRow();
-      	    	$woeid       =  $loc_obj->woeid;
-      	    	$name        =  $loc_obj->name;
-      	    	$parent_id   =  $loc_obj->parent_id;
+		      	    if($loc_qry->getNumRows()):
+		      	    	$loc_obj     =  $loc_qry->getRow();
+		      	    	$woeid       =  $loc_obj->woeid;
+		      	    	$name        =  $loc_obj->name;
+		      	    	$parent_id   =  $loc_obj->parent_id;
 
-      	    	$sub_loc_name = '';
-      	    	if($parent_id != 1):
-      	    	 $sub_loc_qry = $twittertrends->select(['name'])->limit(1)->where(['woeid' => $parent_id, 'parent_id' => 1])->get();
-      	    	 if($sub_loc_qry->getNumRows())
-      	    	 $name        =  $name . ', ' . $sub_loc_qry->getRow()->name;
-      	     	endif;
+		      	    	$sub_loc_name = '';
+		      	    	if($parent_id != 1):
+		      	    	 $sub_loc_qry = $twittertrends->select(['name'])->limit(1)->where(['woeid' => $parent_id, 'parent_id' => 1])->get();
+		      	    	 if($sub_loc_qry->getNumRows())
+		      	    	 $name        =  $name . ', ' . $sub_loc_qry->getRow()->name;
+		      	     	endif;
 
-      	    else:
-      	    	$woeid    	  =   getenv('TWITTER_DEFAULT_WOEID');
-      	    	$name         =   "Worldwide";
-      	    endif;
+		      	    else:
+		      	    	$woeid    	  =   getenv('TWITTER_DEFAULT_WOEID');
+		      	    	$name         =   "Worldwide";
+		      	    endif;
+
+		      	 }
+		      	else
+		      		 {
+		      		 		$woeid    	  =   getenv('TWITTER_DEFAULT_WOEID');
+		      	    	$name         =   "Worldwide";
+		      		 }
 
       	    $arr['name']          =  $name;
 
       	    $twitter_default_sec  =  getenv('TWITTER_DEFAULT_TIME_SEC');
       	    $now                  =  time();
-        	$cal_time             =  $now - $twitter_default_sec;
+        		$cal_time             =  $now - $twitter_default_sec;
 
       	    //$trends_res_qry       =  $twitter_trends->select(['id', 'name', 'url', 'tweet_volume'])->where('create_time >=', $cal_time)->where('woeid', $woeid)->get();
 
