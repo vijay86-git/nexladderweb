@@ -9,6 +9,6 @@ class SubjectModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['name', 'slug', 'logo', 'image'];
+    protected $allowedFields = ['name', 'slug', 'logo', 'image', 'about', 'page_title', 'meta_keywords', 'meta_description', 'status', 'show_nav', 'sort', 'unix_timestamp', 'created_at', 'updated_at'];
 
  }

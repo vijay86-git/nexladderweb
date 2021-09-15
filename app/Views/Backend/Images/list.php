@@ -9,15 +9,15 @@
     <div class="col-lg-12">
         <div class="ibox ">
             <div class="ibox-title padbtm20">
-                <h5>List of Subjects</h5>
+                <h5>List of Images</h5>
 
-                <?php echo form_open(route_to('admin.subject.index'), ['method' => 'get']); ?>
+                <?php echo form_open_multipart(route_to('admin.images.create'), ['method' => 'post']); ?>
                     <?php echo csrf_field() ?>
-                    <label><strong>Search</strong></label>
-                    <input type="text" name="title" required="" class="form-control srch" autocomplete="off" placeholder="Title & enter" value="<?php echo $title ?>" />
+                    <label><strong>Image</strong></label>
+                    <input type="file" name="image" required="" class="form-control srch" autocomplete="off" accept="image/*" />
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                 <?php echo form_close(); ?>
 
-                <a href="<?php echo route_to('admin.subject.new'); ?>"><button type="button" class="btn btn-primary pull-right">Add Subject</button></a>
             </div>
             <div class="ibox-content">
                 <div class="table-responsive">
@@ -34,50 +34,41 @@
                         <table class="table table-striped table-bordered table-hover" role="grid">
                             <thead>
                                 <th>#</th>
-                                <th>Title</th>
-                                <th>Status</th>
+                                <th>Image</th>
+                                <th>Full Url</th>
                                 <th>Added at</th>
-                                <th>Action</th>
                             </thead>
                             <tbody>
                             <?php 
-                               if (count($subject_res)):
+                               if (count($images_res)):
 
                                 $per_page = PAGINATION_PER_PAGE;
 
-                                foreach ($subject_res as $key => $subject_obj):
+                                foreach ($images_res as $key => $images_arr):
 
                                     $serial_no =  ($key + 1) + ($currentffset - 1) * $per_page;
-                                
                             ?>
                                 <tr class="gradeA odd" role="row">
                                     <td class="sorting_1"><?php echo $serial_no; ?></td>
-                                    <td class="sorting_1"><?php echo ucwords($subject_obj['name']); ?></td>
-                                    <td class="sorting_1"><?php echo $subject_obj['status'] == 1 ? "<span class='btn-xs btn-success'>Active</span>" : "<span class='btn-xs btn-danger'>Inactive</span>"; ?></td>
-                                    <td><?php echo date('D, j M\' y h:i A', $subject_obj['unix_timestamp']); ?></td>
-                                    <td class="center">
-
-                                        <a href="<?php echo route_to('admin.subject.edit', $subject_obj['id']); ?>"><button class="btn btn-primary"><i class="fa fa-edit">&nbsp;</i></button></a>
-
-                                    </td>
+                                    <td class="sorting_1"><img src="<?php echo base_url('uploads/'.$images_arr['image_url']); ?>" alt="" width="120" /></td>
+                                    <td class="sorting_1"><?php echo base_url('uploads/'.$images_arr['image_url']); ?></td>
+                                    <td><?php echo date('D, j M\' y h:i A', $images_arr['unix_timestamp']); ?></td>
+                                   
                                 </tr>
-                            
-
+                        
                             <?php
-         
                               endforeach;
                             else:
-                                echo "<tr><td colspan='5'>Sorry, no news found.</td></tr>";
+                                echo "<tr><td colspan='5'>Sorry, no data found.</td></tr>";
                             endif;
                             ?>
                             </tbody>
 
                             <tfoot>
                                 <th>#</th>
-                                <th>Title</th>
-                                <th>Status</th>
+                                <th>Image</th>
+                                <th>Full Url</th>
                                 <th>Added at</th>
-                                <th>Action</th>
                             </tfoot>
                         </table>
                         <div style="margin:0 0 0 1px"><?php echo $pager->links(); ?></div>

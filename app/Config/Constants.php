@@ -11,6 +11,8 @@ if($_SERVER['SERVER_NAME'] == "dev.nexladder.local")
         defined('DOC_ROOT_BACKEND_JS')  || define('DOC_ROOT_BACKEND_JS', '/var/www/html/nexladderweb/public/backend/assets/js/');
   }
 
+define('PAGINATION_PER_PAGE') || define('PAGINATION_PER_PAGE', 15);
+
 /*
  | --------------------------------------------------------------------
  | App Namespace

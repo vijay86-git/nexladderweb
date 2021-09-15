@@ -9,6 +9,6 @@ class SectionModel extends Model
 
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['subject_id', 'section', 'sort', 'status'];
+    protected $allowedFields = ['subject_id', 'section', 'sort', 'unix_timestamp', 'status', 'created_at', 'updated_at'];
 
  }

@@ -83,7 +83,9 @@ $routes->get('/users.json', 'Api::usersJson', ['as' => 'users.json']);
 $routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
     $routes->get('/', 'Auth::index', ['as' => 'admin.get.login']);
+
     $routes->post('login', 'Auth::login', ['as' => 'admin.post.login']);
+
     $routes->get('dashboard', 'Dashboard::index', ['as' => 'admin.dashboard.index']);
 
     $routes->get('forgot-password', 'Auth::forgot', ['as' => 'admin.forgot.index']);
@@ -93,9 +95,33 @@ $routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('logout', 'Dashboard::logout', ['as' => 'admin.dashboard.logout']);
 
 
+    $routes->get('subjects/new', 'Subjects::new', ['as' => 'admin.subject.new']);
+    $routes->post('subjects', 'Subjects::create', ['as' => 'admin.subject.create']);
+    $routes->get('subjects', 'Subjects::index', ['as' => 'admin.subjects.index']);
+    $routes->get('subjects/(:segment)/edit', 'Subjects::edit/$1', ['as' => 'admin.subject.edit']);
+    $routes->post('subjects/(:segment)', 'Subjects::update/$1', ['as' => 'admin.subject.update']);
+
+
+    $routes->get('sections/new', 'Sections::new', ['as' => 'admin.section.new']);
+    $routes->post('sections', 'Sections::create', ['as' => 'admin.section.create']);
+    $routes->get('sections', 'Sections::index', ['as' => 'admin.sections.index']);
+    $routes->get('sections/(:segment)/edit', 'Sections::edit/$1', ['as' => 'admin.section.edit']);
+    $routes->post('sections/(:segment)', 'Sections::update/$1', ['as' => 'admin.section.update']);
+
+
+    $routes->get('topics/new', 'Topics::new', ['as' => 'admin.topic.new']);
+    $routes->post('topics', 'Topics::create', ['as' => 'admin.topic.create']);
+    $routes->get('topics', 'Topics::index', ['as' => 'admin.topics.index']);
+    $routes->get('topics/(:segment)/edit', 'Topics::edit/$1', ['as' => 'admin.topic.edit']);
+    $routes->post('topics/(:segment)', 'Topics::update/$1', ['as' => 'admin.topic.update']);
+
+
+
+    $routes->get('images', 'Images::index', ['as' => 'admin.images.index']);
+    $routes->post('images', 'Images::create', ['as' => 'admin.images.create']);
+
+
 });
-
-
 
 $routes->get('/(:any)/(:any)', 'Page::topics/$1/$2', ['as' => 'topic.detail']);
 $routes->get('/(:any)', 'Page::subject/$1');
