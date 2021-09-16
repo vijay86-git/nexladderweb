@@ -82,7 +82,7 @@
                   <div class="row mrgnbtm35">
                      <div class="col-md-12">
 
-                     	    <h2 class="padlft14"><?php echo strtoupper(str_replace('-', ' ', $converter)); ?><i class="fa fa-star"></i></h2>
+                     	    <h2 class="padlft14"><?php echo strtoupper(str_replace('-', ' ', $converter)); ?>  <i class="fa fa-exchange">&nbsp;</i></h2>
                             <div class="col-md-6">
 
                         		<h5> From: <span id="select_from_title"></span> </h5> 
