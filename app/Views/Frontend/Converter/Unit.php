@@ -103,7 +103,7 @@
 
                             <div class="col-md-6">
 
-                        	    <h5>To:<span id="select_to_title"></span> </h5> 
+                        	    <h5> To: <span id="select_to_title"></span> </h5> 
                         	    <input type="text" class="form-control mrgnbtm15" id="to_input" readonly="readonly" /> 
 
                         		<select size="15" style="height: 555px;" class="span12" id="to_select" onchange="convert('<?= $converter ?>');"> 
