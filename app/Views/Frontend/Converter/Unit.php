@@ -6,6 +6,7 @@
  ul.liststyles li {line-height:34px;font-size:13px;border-bottom:1px solid #f1f1f1;padding-left:10px;}
  select option {padding:5px 10px;}
  .activecls{background:#e6e6e6}
+ .padlft14{padding-left:14px;}
 </style>
          <div class="">
             <div class="row">
@@ -80,6 +81,8 @@
 
                   <div class="row mrgnbtm35">
                      <div class="col-md-12">
+
+                     	    <h2 class="padlft14"><?php echo strtoupper(str_replace('-', ' ', $converter)); ?><i class="fa fa-star"></i></h2>
                             <div class="col-md-6">
 
                         		<h5> From: <span id="select_from_title"></span> </h5> 
