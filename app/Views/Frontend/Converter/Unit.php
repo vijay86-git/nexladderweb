@@ -2,8 +2,8 @@
 <?php echo $this->section('content'); ?>
 
 <style>
- ul.liststyles{line-height:36px;border:1px solid #f1f1f1;margin:0;padding:0;list-style-type:none;margin-bottom:20px}
- ul.liststyles li {line-height:28px;font-size:13px;}
+ ul.liststyles{border:1px solid #f1f1f1;margin:0;padding:0;list-style-type:none;margin-bottom:20px}
+ ul.liststyles li {line-height:34px;font-size:13px;border-bottom:1px solid #f1f1f1;padding-left:10px;}
  select option {padding:5px 10px;}
 </style>
          <div class="">
