@@ -80,6 +80,9 @@ $routes->get('/twitter-trends/(:any)/(:any)', 'Trends::twitter/$1/$2', ['as' => 
 $routes->get('/users.json', 'Api::usersJson', ['as' => 'users.json']);
 
 
+$routes->get('/converter/(:any)', 'Converter::unit/$1', ['as' => 'unit.convertor']);
+
+
 $routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
     $routes->get('/', 'Auth::index', ['as' => 'admin.get.login']);
