@@ -2,7 +2,7 @@
 <?php echo $this->section('content'); ?>
 
 <style>
-.converterBox{margin:10px;width:31%;border:1px dashed #ddd;border-radius:10px;line-height:80px;text-align:center;height:80px}
+.converterBox{background: #f9f9f9;margin:10px;width:31%;border:1px dashed #b9b9b9;border-radius:10px;line-height:80px;text-align:center;height:80px}
 .converterBox a{font-size:20px}
 </style>
          <div class="">
