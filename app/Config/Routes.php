@@ -80,7 +80,7 @@ $routes->get('/twitter-trends/(:any)/(:any)', 'Trends::twitter/$1/$2', ['as' => 
 $routes->get('/users.json', 'Api::usersJson', ['as' => 'users.json']);
 
 
-$routes->get('/converter', 'Converter::converter/$1', ['as' => 'convertor']);
+$routes->get('/converter', 'Converter::converter/$1', ['as' => 'converter']);
 $routes->get('/converter/(:any)', 'Converter::unit/$1', ['as' => 'unit.convertor']);
 
 
