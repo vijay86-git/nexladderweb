@@ -3,7 +3,7 @@
 
 <style>
 .converterBox{background: #f9f9f9;margin:10px;width:31%;border:1px dashed #b9b9b9;border-radius:10px;line-height:80px;text-align:center;height:80px}
-.converterBox a{font-size:20px}
+.converterBox a{font-size:18px;font-weight:bold}
 </style>
          <div class="">
             <div class="row">
