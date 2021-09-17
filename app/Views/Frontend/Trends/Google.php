@@ -66,13 +66,13 @@
                      <div class="col-md-12">
                      <div class="row shadow-box">
                            <div class="col-md-3 imgset">
-                              <a target="_blank" href="<?php echo $trend->news_url ?>"><img onerror="this.onerror=null; this.src='<?php echo $no_image ?>'" src="<?php echo $trend->image ?>" alt="<?php echo $trend->title ?>" title="<?php echo $trend->title ?>" style="width:100%" /></a>
+                              <a target="_blank" rel="nofollow" href="<?php echo $trend->news_url ?>"><img onerror="this.onerror=null; this.src='<?php echo $no_image ?>'" src="<?php echo $trend->image ?>" alt="<?php echo $trend->title ?>" title="<?php echo $trend->title ?>" style="width:100%" /></a>
                            </div>
                            <div class="col-md-9 googletrends">
 
                               <div class="google_trends_info">
-                                <span class="google_trend_heading"><a target="_blank" href="<?php echo $trend->news_url ?>"><?php echo $trend->title ?>:</a></span> 
-                                <span class="google_trends_badge"><a target="_blank" href="<?php echo $trend->news_url ?>"><?php echo $trend->formattedTraffic ?></a></span>
+                                <span class="google_trend_heading"><a target="_blank" rel="nofollow" href="<?php echo $trend->news_url ?>"><?php echo $trend->title ?>:</a></span> 
+                                <span class="google_trends_badge"><a target="_blank" rel="nofollow" href="<?php echo $trend->news_url ?>"><?php echo $trend->formattedTraffic ?></a></span>
                               </div>
 
 
@@ -83,7 +83,7 @@
                                     foreach($trends_related as $trend_info):
                                ?>
                                  <div class="trend_related">
-                                    <p><strong><a target="_blank" href="<?php echo $trend_info->url ?>"><?php echo $trend_info->title ?>&nbsp;<i class="fa fa-external-link">&nbsp;</i></a></strong> <span class="badge">source: <?php echo $trend_info->source ?></span></p>
+                                    <p><strong><a target="_blank" rel="nofollow" href="<?php echo $trend_info->url ?>"><?php echo $trend_info->title ?>&nbsp;<i class="fa fa-external-link">&nbsp;</i></a></strong> <span class="badge">source: <?php echo $trend_info->source ?></span></p>
                                     <p class="fnt12"><?php echo $trend_info->snipped ?></p>
                                  </div>
 

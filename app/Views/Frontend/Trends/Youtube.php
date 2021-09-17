@@ -80,11 +80,11 @@
                      <div class="col-md-12">
                         <div class="row shadow-box">
                            <div class="col-md-3 imgset">
-                              <a target="_blank" href="<?php echo $link ?>"><img onerror="this.onerror=null; this.src='<?= $no_image ?>'" src="<?php echo $img ?>" alt="<?php echo $trend->title ?>" title="<?php echo $trend->title ?>" style="width:100%" /></a>
+                              <a target="_blank" rel="nofollow" href="<?php echo $link ?>"><img onerror="this.onerror=null; this.src='<?= $no_image ?>'" src="<?php echo $img ?>" alt="<?php echo $trend->title ?>" title="<?php echo $trend->title ?>" style="width:100%" /></a>
                            </div>
                            <div class="col-md-9 googletrends">
                               <div class="google_trends_info">
-                                <h2 class="google_trend_heading"><a target="_blank" href="<?php echo $link ?>"><?php echo $trend->title ?>:</a></h2> 
+                                <h2 class="google_trend_heading"><a target="_blank" rel="nofollow" href="<?php echo $link ?>"><?php echo $trend->title ?>:</a></h2> 
                                 <span class="google_trends_badge">Upload by: <?php echo $trend->channel_title ?> <?php echo $uploaded_on_time ?></span>
                               </div>
 

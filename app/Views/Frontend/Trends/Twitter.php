@@ -44,7 +44,7 @@
                                            $cls = ($key % 2) == 0 ? 'bggry' : '';
                                            echo  '<tr class="'.$cls.'">
                                                     <th scope="row">'.($key + 1).'</th>
-                                                    <td><a href="'.$result['url'].'" title="'.$result['name'].'" target=\'_blank\'>'.$result['name'].'&nbsp;&nbsp;<i class=\'fa fa-external-link\'></a></td>
+                                                    <td><a rel="nofollow" href="'.$result['url'].'" title="'.$result['name'].'" target=\'_blank\'>'.$result['name'].'&nbsp;&nbsp;<i class=\'fa fa-external-link\'></a></td>
                                                     <td>'.(empty($result['tweet_volume']) ? 'Under 10K' : number_format_short($result['tweet_volume'])).'</i></td>
                                                   </tr>';
                                           endforeach;
