@@ -108,7 +108,7 @@
                   </div>
 
                   <div class="row mrgnTpBtm">
-                     <div class="col-md-12">
+                     <div class="col-md-12 text-center">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- Ad 3 -->
                         <ins class="adsbygoogle"
