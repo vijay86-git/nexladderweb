@@ -139,7 +139,6 @@
                </div>
             </div>
          </div>
-      </div>
 
       <?php $this->endSection(); ?>
 
