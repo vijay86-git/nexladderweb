@@ -88,7 +88,7 @@
                         		<h5> From: <span id="select_from_title"></span> </h5> 
                         		<input type="text" class="form-control mrgnbtm15" id="from_input" value="1" onchange="convert('<?= $converter ?>');" onkeyup="convert('<?= $converter ?>');"> 
 
-                        		<select size="15" style="height: 555px;" class="span12" id="from_select" onchange="convert('weight-converter');"> 
+                        		<select size="15" style="height: 555px;" class="span12" id="from_select" onchange="convert('<?= $converter ?>');"> 
 
  								  <?php
  								   $html = '';
