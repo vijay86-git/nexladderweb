@@ -84,6 +84,10 @@ $routes->get('/converter', 'Converter::converter/$1', ['as' => 'converter']);
 $routes->get('/converter/(:any)', 'Converter::unit/$1', ['as' => 'unit.convertor']);
 
 
+$routes->get('/cryptography-tools', 'Converter::cryptography', ['as' => 'cryptography']);
+$routes->get('/cryptography-tools/(:any)', 'Converter::tools/$1', ['as' => 'cryptography.tools']);
+
+
 $routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
     $routes->get('/', 'Auth::index', ['as' => 'admin.get.login']);

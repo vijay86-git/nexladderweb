@@ -11,6 +11,168 @@ class Converter extends BaseController
             helper(['url', 'form', 'site']);
         }
 
+    public function cryptography()
+     {
+     	$prefix        =  "Nexladder Web Tutorials - ";
+     	$page_title    =  "$prefix Best online tool to provides all types of cryptography tools.";
+		$page_keywords =  "md4 hash generator,md5 hash generator,sha1 hash generator,sha2 hash generator,sha224 hash generator,sha256 hash generator,sha384 hash generator,sha512 hash generator,sha512/224 hash generator,sha512/256 hash generator,sha3-256 hash generator,sha3-384 hash generator,sha3-512 hash generator,crc 16 hash generator,crc 32 hash generator,md6 hash generator,"; 
+		$page_description = "Cryptography generator tools - provides all types of cryptography tools such as md2 generator, md4 generator, md5 generator, sha1, sha2 generator etc.";
+     	return view('Frontend/Converter/Tools', compact('page_title', 'page_keywords', 'page_description'));
+     }
+
+
+    public function tools($tool = '')
+     {
+     	$prefix  = "Nexladder Web Tutorials";
+     	
+     	switch($tool)
+	       {
+	       		default:
+	       		case 'md2-hash-generator':
+	       			$page_title    =  "MD2 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "md2 hash generator, md2 hash, md4 hasher, md2 hash checker,md2 hash online, md2 hash calculator,md2 hash algorithm, md2 hash converter to text online"; 
+	  	 			$page_description = "MD2 Hash Function Generator is online tool to convert text to MD2 hash Online. Secure and one of the best tool.";
+	  	 			$view    = 'Frontend/Converter/Md2';
+
+	       		break;
+
+	       		case 'md4-hash-generator':
+	       			$page_title    =  "MD4 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "md4 hash generator, md4 hash, md4 hasher, md4 hash checker,md4 hash online, md4 hash calculator,md4 hash algorithm, md4 hash converter to text online"; 
+	  	 			$page_description = "MD4 Hash Function Generator is online tool to convert text to MD4 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Md4';
+
+	       		break;
+
+	       		case 'md5-hash-generator':
+	       			$page_title    =  "MD5 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "md5 hash generator, md5 hash, md5 hasher, md5 hash checker,md5 hash online, md5 hash calculator,md5 hash algorithm, md5 hash converter to text online"; 
+	  	 			$page_description = "MD5 Hash Function Generator is online tool to convert text to MD5 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Md5';
+	       		break;
+
+	       		case 'sha1-hash-generator':
+	       			$page_title    =  "Sha1 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha1 hash generator, sha1 hash, sha1 hasher, sha1 hash checker,sha1 hash online, sha1 hash calculator,sha1 hash algorithm, sha1 hash converter to text online"; 
+	  	 			$page_description = "Sha1 Hash Function Generator is online tool to convert text to sha1 hash Online. Secure and one of the best tool.";
+	  	 			$view    = 'Frontend/Converter/Sha1';
+	  	 		break;
+
+	  	 		case 'sha2-hash-generator':
+	       			$page_title    =  "Sha2 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha2 hash generator, sha2 hash, sha2 hasher, sha2 hash checker,sha2 hash online, sha2 hash calculator,sha2 hash algorithm, sha2 hash converter to text online"; 
+	  	 			$page_description = "Sha2 Hash Function Generator is online tool to convert text to sha2 hash Online. Secure and one of the best tool.";
+	  	 			$view    = 'Frontend/Converter/Sha2';
+	  	 		break;
+
+	  	 		case 'sha224-hash-generator':
+	       			$page_title    =  "Sha224 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha224 hash generator, sha224 hash, sha224 hasher, sha224 hash checker,sha224 hash online, sha224 hash calculator,sha224 hash algorithm, sha224 hash converter to text online"; 
+	  	 			$page_description = "Sha224 Hash Function Generator is online tool to convert text to Sha224 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha224';
+	  	 		break;
+
+	  	 		case 'sha256-hash-generator':
+	       			$page_title    =  "Sha256 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha256 hash generator, sha256 hash, sha256 hasher, sha256 hash checker,sha256 hash online, sha256 hash calculator,sha256 hash algorithm, sha256 hash converter to text online"; 
+	  	 			$page_description = "Sha256 Hash Function Generator is online tool to convert text to Sha256 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha256';
+	  	 		break;
+
+	  	 		case 'sha384-hash-generator':
+	       			$page_title    =  "Sha384 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha384 hash generator, sha384 hash, sha384 hasher, sha384 hash checker,sha384 hash online, sha384 hash calculator,sha384 hash algorithm, sha384 hash converter to text online"; 
+	  	 			$page_description = "Sha384 Hash Function Generator is online tool to convert text to Sha384 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha384';
+	  	 		break;
+
+
+	  	 		case 'sha512-hash-generator':
+	       			$page_title    =  "Sha512 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "Sha512 hash generator, Sha512 hash, Sha512 hasher, Sha512 hash checker,Sha512 hash online, Sha512 hash calculator,Sha512 hash algorithm, Sha512 hash converter to text online"; 
+	  	 			$page_description = "Sha512 Hash Function Generator is online tool to convert text to Sha512 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha512';
+	  	 		break;
+
+	  	 		case 'sha512-224-hash-generator':
+	       			$page_title    =  "Sha512-224 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha512-224 hash generator, sha512-224 hash, sha512-224 hasher, sha512-224 hash checker,sha512-224 hash online, sha512-224 hash calculator,sha512-224 hash algorithm, sha512-224 hash converter to text online"; 
+	  	 			$page_description = "Sha512-224 Hash Function Generator is online tool to convert text to Sha512-224 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha512_224';
+	  	 		break;
+
+	  	 		case 'sha512-256-hash-generator':
+	       			$page_title    =  "SHA512/256 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha512/256 hash generator, sha512/256 hash, sha512/256 hasher, sha512/256 hash checker,sha512/256 hash online, sha512/256 hash calculator,sha512/256 hash algorithm, sha512/256 hash converter to text online"; 
+	  	 			$page_description = "SHA512/256 Hash Function Generator is online tool to convert text to SHA512/256 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha512_256';
+	  	 		break;
+
+	  	 		case 'sha3-256-hash-generator':
+	       			$page_title    =  "SHA3-256 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha3-256 hash generator, sha3-256 hash, sha3-256 hasher, sha3-256 hash checker,sha3-256 hash online, sha3-256 hash calculator,sha3-256 hash algorithm, sha3-256 hash converter to text online"; 
+	  	 			$page_description = "SHA3-256 Hash Function Generator is online tool to convert text to SHA3-256 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha3_256';
+	  	 		break;
+
+	  	 		case 'sha3-384-hash-generator':
+	       			$page_title    =  "SHA3-384 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha3-384 hash generator, sha3-384 hash, sha3-384 hasher, sha3-384 hash checker,sha3-384 hash online, sha3-384 hash calculator,sha3-384 hash algorithm, sha3-384 hash converter to text online"; 
+	  	 			$page_description = "SHA3-384 Hash Function Generator is online tool to convert text to SHA3-384 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha3_384';
+	  	 		break;
+
+	  	 		case 'sha3-512-hash-generator':
+	       			$page_title    =  "SHA3-512 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "sha3-512 hash generator, sha3-512 hash, sha3-512 hasher, sha3-512 hash checker,sha3-512 hash online, sha3-512 hash calculator,sha3-512 hash algorithm, sha3-512 hash converter to text online"; 
+	  	 			$page_description = "sha3-512 Hash Function Generator is online tool to convert text to sha3-512 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Sha3_512';
+	  	 		break;
+
+	  	 		case 'crc-16-hash-generator':
+	       			$page_title    =  "CRC-16 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "crc-16 hash generator, crc-16 hash, crc-16 hasher, crc-16 hash checker,crc-16 hash online, crc-16 hash calculator,crc-16 hash algorithm, crc-16 hash converter to text online"; 
+	  	 			$page_description = "CRC-16 Hash Function Generator is online tool to convert text to CRC-16 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Crc_16';
+	  	 		break;
+
+	  	 		case 'crc-32-hash-generator':
+	       			$page_title    =  "CRC-32 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "crc-32 hash generator, crc-32 hash, crc-32 hasher, crc-32 hash checker,crc-32 hash online, crc-32 hash calculator,crc-32 hash algorithm, crc-32 hash converter to text online"; 
+	  	 			$page_description = "CRC-32 Hash Function Generator is online tool to convert text to CRC-32 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Crc_32';
+	  	 		break;
+
+
+	  	 		case 'md6-hash-generator':
+	       			$page_title    =  "MD6 Hash Generator Online Tool - $prefix";
+	  	 			$page_keywords =  "md6 hash generator, md6 hash, md6 hasher, md6 hash checker,md6 hash online, md6 hash calculator,md6 hash algorithm, md6 hash converter to text online"; 
+	  	 			$page_description = "MD6 Hash Function Generator is online tool to convert text to MD6 hash Online. Secure and one of the best tool.";
+
+	  	 			$view    = 'Frontend/Converter/Md6';
+	  	 		break;
+
+
+	       }
+
+	       return view($view, compact('tool', 'page_title', 'page_keywords', 'page_description'));
+     }
+
+
+
     public function converter()
      {
      	$prefix        = "Nexladder Web Tutorials -";
