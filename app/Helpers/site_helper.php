@@ -148,6 +148,14 @@ if ( ! function_exists("twitter_trends"))
       	    $twittertrends  =  new TrendLocationModel();
       	    $twitter_trends =  new TwitterTrendsModel();
 
+
+      	    /* delete old records */
+		    	   $current_time 				  = time();
+		    	   $remain_time           = $current_time -  86400;
+		   	     $twitter_trends->query("DELETE FROM `twitter_trends` WHERE `create_time` <= $remain_time");
+		       /*  close */
+
+
       	    if(! empty($country) OR ! empty($place)) 
       	      {
       	      	if( ! empty($place)):
@@ -403,8 +411,8 @@ if ( ! function_exists("youtube_trends"))
      function youtube_trends($alias = "")
 		{
 	        $db       		   	  = getDbObject();
-            $countries            = $db->table('countries');
-            $ytobj             	  = new YoutubeModel();
+          $countries            = $db->table('countries');
+          $ytobj             	  = new YoutubeModel();
 
     	    if(empty($alias)):
     			 $code        			  = getenv('GOOGLE_DEFAULT_TRENDS');
@@ -430,6 +438,14 @@ if ( ! function_exists("youtube_trends"))
         	//$trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at >=', $cal_time)->where('code', $code)->get();
 
         	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE (`code` = '".$code."' AND `created_at` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
+
+
+        	/* delete old records */
+		    	 $current_time 				  = time();
+		    	 $remain_time            = $current_time -  86400;
+		   	   $ytobj->query("DELETE FROM `youtube_trends` WHERE `created_at` <= $remain_time");
+		      /*  close */
+
 
         	$data_res['results'] = [];
 
