@@ -139,9 +139,8 @@ include_once($file)
             <div class="social-widget-wrapper">
                 <!-- Social widget -->
                   <p class="social-link">Share this example with 
-                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u={{ Request::url() }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
-                    <a id="twitter-share-btn" href="https://twitter.com/share?text={{ $text }}&amp;url={{ Request::url() }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>, 
-                    <a id="google-share-btn" href="https://plus.google.com/share?url={{ Request::url() }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=438,width=600,top=150, left='+((screen.width/2)-300));return false;">Google +</a>
+                    <a id="facebook-share-btn" href="https://facebook.com/sharer.php?u=<?php echo current_url() ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Facebook</a>, 
+                    <a id="twitter-share-btn" href="https://twitter.com/share?text=<?php echo $text ?>&amp;url=<?php echo current_url() ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600,top=150, left='+((screen.width/2)-300));return false;">Twitter</a>
                   </p>
                 <!-- End:Social widget -->
             </div>
