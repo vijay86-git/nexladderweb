@@ -52,7 +52,7 @@ class Api extends BaseController
     public function youtube_api($alias = '')
         { 
             $res_arr  = youtube_trends($alias);
-            return $this->response->setJson(['response' => $res_arr]);
+            return $this->response->setJson(['response' => $res_arr['results']]);
         }
 
     public function trends($alias = '')
