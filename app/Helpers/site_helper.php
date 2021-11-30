@@ -260,35 +260,35 @@ if ( ! function_exists("google_trends"))
      function google_trends($alias = "")
 		    {		
 
-				$db       		   	      = getDbObject();
-				$countries              = $db->table('countries');
+					$db       		   	      = getDbObject();
+					$countries              = $db->table('countries');
 
-				$trends                 = new TrendModel();
-				$trend_related_builder  = new TrendRelatedModel();
+					$trends                 = new TrendModel();
+					$trend_related_builder  = new TrendRelatedModel();
 
-				 /* delete old records */
-		    	$current_time 				  = time();
-		    	$remain_time            = $current_time -  86400;
-		   	  $trends->query("DELETE FROM `trends` WHERE `create_time` <= $remain_time");
-		   	  $trend_related_builder->query("DELETE FROM `trends_related` WHERE `create_time` <= $remain_time");
-		    /* close */
+					 /* delete old records */
+			    	$current_time 				  = time();
+			    	$remain_time            = $current_time -  86400;
+			   	  $trends->query("DELETE FROM `trends` WHERE `create_time` <= $remain_time");
+			   	  $trend_related_builder->query("DELETE FROM `trends_related` WHERE `create_time` <= $remain_time");
+			    /* close */
 
 
-				if(empty($alias)):
-				 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
-				 $title                 = "India";
-				else:
-				 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
-				 if(isset($country_obj->code))
-				 	 {
-				 	 	  $code           = $country_obj->code;
-						  $title          = $country_obj->title;
-				 	 }
-				   else
-				     {
-				     	return [];
-				     }
-				endif;
+					if(empty($alias)):
+					 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
+					 $title                 = "India";
+					else:
+					 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+					 if(isset($country_obj->code))
+					 	 {
+					 	 	  $code           = $country_obj->code;
+							  $title          = $country_obj->title;
+					 	 }
+					   else
+					     {
+					     	return [];
+					     }
+					endif;
 
 				  $data['name']       = ucwords($title);
 
