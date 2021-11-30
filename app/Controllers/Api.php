@@ -43,223 +43,26 @@ class Api extends BaseController
            return $this->response->setJson($users);
       }
 
-
-    public function twitter()
+    public function twitter_api($country = '', $place = '')
      {
-        $settings = array(
-                            'oauth_access_token' => getenv('TWITTER_OAUTH_ACCESS_TOKEN'),
-                            'oauth_access_token_secret' => getenv('TWITTER_OAUTH_ACCESS_TOKEN_SECRET'),
-                            'consumer_key' => getenv('TWITTER_CONSUMER_KEY'),
-                            'consumer_secret' => getenv('TWITTER_CONSUMER_SECRET')
-                         );
-
-        $url            =  getenv('TWITTER_TREND_URL');
-        $requestMethod  = "GET";
-        $getfield       = "?id=" . getenv('TWITTER_DEFAULT_WOEID');
-        $twitter        = new TwitterAPIExchange($settings);
-        $json_response  = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
-
-        $resp           = json_decode($json_response);
-
-        foreach($resp[0]->trends as $content):
-                            $data = [];
-                            $data['woeid']               = 1;
-                            $data['name']                = $content->name;
-                            $data['url']                 = $content->url;
-                            $data['promoted_content']    = $content->promoted_content;
-                            $data['query']               = $content->query;
-                            $data['tweet_volume']        = $content->tweet_volume  ;
-                            $data['create_time']         = time();//$content['stats'];
-                            $this->_twittertrends->insert($data);
-
-                            //echo $this->_twittertrends->getLastQuery();
-        endforeach;
-
-     }
-
-
-    public function twitter_api()
-     {
-            $query   = "SELECT `name`, `url`, `tweet_volume` FROM `twitter_trends` WHERE `woeid` = 1";
-            $db      = \Config\Database::connect();
-            $results = $db->query($query);
-
-            $res_arr = [];
-            if($results->getNumRows()):
-                foreach($results->getResult() as $res):
-                  $res_arr[] = ['name' => $res->name, 'url' => (string) $res->url, 'tweet_volume' => (int) $res->tweet_volume];
-                endforeach;
-            endif;
+            $res_arr  = twitter_trends($country, $place);
             return $this->response->setJson(['response' => $res_arr]);
      }
 
-
-
-    public function youtube()
+    public function youtube_api($alias = '')
         { 
-            $get_file_contents  = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&maxResults=25&key=AIzaSyDryweDU_0oHSMYPEJqBq5BsTqhGJrYb9c");
-            $file_contents      = json_decode($get_file_contents);  
-            if(isset($file_contents->items)):
-                if(count($file_contents->items)):
-                    foreach($file_contents->items as $content):
-                        $data['yt_id']         = $content->id;
-                        $data['title']         = $content->snippet->title;
-                        $data['description']   = $content->snippet->description;
-                        $data['thumbnails']    = json_encode($content->snippet->thumbnails);
-                        $data['channel_title'] = $content->snippet->channelTitle;
-                        $data['category_id']   = $content->snippet->categoryId  ;
-                        $data['published_at']  = $content->snippet->publishedAt;
-                        $data['stats']         = json_encode([]);//$content['stats'];
-                        $data['created_at']    = time();
-                        $this->_ytobj->insert($data);
-                    endforeach;
-                endif;
-            endif;
-        }
-
-    public function youtube_stats()
-        { 
-            $get_file_contents  = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=statistics&chart=mostPopular&regionCode=IN&maxResults=25&key=AIzaSyDryweDU_0oHSMYPEJqBq5BsTqhGJrYb9c");
-            $file_contents      = json_decode($get_file_contents);  
-            if(isset($file_contents->items)):
-                if(count($file_contents->items)):
-                    foreach($file_contents->items as $content):
-                        $yt_id                 = $content->id;
-                        $stats                 = json_encode($content->statistics);
-                        $this->_ytobj->where(['yt_id' => $yt_id])->set('stats', $stats)->update();
-                    endforeach;
-                endif;
-            endif;
-        }
-
-    public function youtube_api()
-        { 
-            $code    = "IN";    
-            $query   = "SELECT `title`, `description`, `thumbnails`, `channel_title`, `stats` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` ORDER BY `id` DESC LIMIT 1)";
-            $db      = \Config\Database::connect();
-            $results = $db->query($query);
-
-            $res_arr = [];
-            if($results->getNumRows()):
-                foreach($results->getResult() as $res):
-                  $thumbnail = json_decode($res->thumbnails);
-                  $stats_obj = json_decode($res->stats);
-                  $res_arr[] = ['title' => $res->title, 'image' => $thumbnail->default->url, 'channel_title' => $res->channel_title, 'like' => (int) @$stats_obj->likeCount, 'view' => (int)  @$stats_obj->viewCount, 'comment' => (int) @$stats_obj->commentCount, 'dislike' => (int) @$stats_obj->dislikeCount, 'favorite' => (int)  @$stats_obj->favoriteCount];
-                endforeach;
-            endif;
-            return $this->response->setJson(['response' => $res_arr]);
-
-        }
-
-
-    public function trends($code = '')
-        { 
-            $code    = "IN";
-            $query   = "SELECT `title`, `image`, `news_url`, `source` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE `code` = '".$code."' ORDER BY `id` DESC LIMIT 1)";
-            $db      = \Config\Database::connect();
-            $results = $db->query($query);
-
-            $res_arr = [];
-            if($results->getNumRows()):
-                foreach($results->getResult() as $res)
-                $res_arr[] = ['id' => (int) $res->id, 'title' => $res->title, 'image' => $res->image, 'news_url' => $res->news_url, 'source' => $res->source];
-            endif;
-
+            $res_arr  = youtube_trends($alias);
             return $this->response->setJson(['response' => $res_arr]);
         }
 
-    public function relatedTrends($trend_id = '')
+    public function trends($alias = '')
         { 
-            $query    = "SELECT `title`, `time_ago`, `source`, `news_url`, `image_url`, `url`, `snipped` FROM `trends_related` WHERE `trend_id` = $trend_id";
-            $db       = \Config\Database::connect();
-            $results  = $db->query($query);
-            $res_arr  = []; 
-            if($results->getNumRows()):
-                foreach($results->getResult() as $res)
-                $res_arr[] = ['title' => htmlspecialchars_decode($res->title), 'time_ago' => $res->time_ago, 'source' => $res->source, 'news_url' => $res->news_url,  'image_url' => $res->image_url, 'url' => $res->url, 'snipped' => $res->snipped];
-            endif;
-            
+            $res_arr  =  google_trends($alias);
             return $this->response->setJson(['response' => $res_arr]);
         }
 
     public function subjects($slug = '')
     { 
-        # This options are by default if none provided
-        $code    = "IN";
-        $options = [
-                'hl'  => 'en-GB',
-                'tz'  => -1200, # last hour
-                'geo' => $code,
-            ];
-
-        $gt = new GTrends($options);
-        $get_daily_search_trends = $gt->getDailySearchTrends();
-        if(isset($get_daily_search_trends['default']['trendingSearchesDays']))
-         {
-             $trendingSearchesDays = $get_daily_search_trends['default']['trendingSearchesDays'];
-             if(count($trendingSearchesDays)):
-                foreach($trendingSearchesDays as $key => $trending_searches):
-                 if($key == 0):
-                    $date           =  $trending_searches['date'];
-                    if($date):
-                      $year         =  substr($date, 0, 4);
-                      $month        =  substr($date, 4, 2);
-                      $day          =  substr($date, 6, 2);
-                      $date_format  =  mktime(0, 0, 0, $month, $day, $year);
-                    endif;
-                 endif;
-
-                 foreach($trending_searches['trendingSearches'] as $trending_search_data):
-                    $main_title = $trending_search_data['title']['query'] ?? '';
-                    $image      = $trending_search_data['image']['imageUrl'] ?? '';
-                    $news_url   = $trending_search_data['image']['newsUrl'] ?? '';
-                    $source     = $trending_search_data['image']['source'] ?? '';
-                    $parent_data = [
-                                        'code' => $code,
-                                        'date_format' => $date_format ?? NULL,
-                                        'title' => $main_title,
-                                        'image'    => $image,
-                                        'news_url' => $news_url,
-                                        'source' => $source,
-                                        'create_time' => time()
-                                    ];
-                    $this->_trendobj->insert($parent_data);
-                    $trend_id = $this->_trendobj->getInsertID();
-
-                    if(isset($trending_search_data['articles'])):
-                         if(count($trending_search_data['articles'])):
-                            foreach($trending_search_data['articles'] as $key => $related_articles):
-
-                                $title    =  $related_articles['title'] ?? '';
-                                $timeAgo  =  $related_articles['timeAgo'] ?? '';
-                                $source   =  $related_articles['source'] ?? '';
-                                $newsUrl  =  $related_articles['image']['newsUrl'] ?? '';
-                                $imageUrl =  $related_articles['image']['imageUrl'] ?? '';
-                                $url      =  $related_articles['url'] ?? '';
-                                $snippet  =  $related_articles['snippet'] ?? '';
-
-                                $child_data = [
-                                                'trend_id' => $trend_id,
-                                                'title' => $title,
-                                                'time_ago'    => $timeAgo,
-                                                'source' => $source,
-                                                'news_url' => $newsUrl,
-                                                'image_url' => $imageUrl,
-                                                'url' => $url,
-                                                'snipped' => $snippet,
-                                                'create_time' => time()
-                                             ];
-                                $this->_trend_related_obj->insert($child_data);
-
-                            endforeach;
-                        endif;
-                    endif;
-                endforeach;
-                endforeach;
-             endif;
-         }
-
-
         $subjects    =  $this->_subjectobj->select(['id', 'name', 'image'])->where('status', 1)->get();
         if($subjects->getNumRows()):
             foreach($subjects->getResult() as $res)
