@@ -786,4 +786,140 @@ if ( ! function_exists("google_trends_api"))
 
 
 
+if ( ! function_exists("youtube_trends_api")) 
+  {
+     function youtube_trends_api($alias = "")
+		  {
+	        $db       		   	  = getDbObject();
+          $countries            = $db->table('countries');
+          $ytobj             	  = new YoutubeModel();
+
+    	    if(empty($alias)):
+    			 $code        			  = getenv('GOOGLE_DEFAULT_TRENDS');
+    			 $title                   = "India";
+    	    else:
+    			 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+    			 if(isset($country_obj->code)) {
+	               $code                  = $country_obj->code;
+	               $title                 = $country_obj->title;
+	             }
+	             else
+	               	 {
+	               	 	return [];
+	               	 }
+		    	endif;
+
+			    $data_res['name']   = ucwords($title);
+
+	    		$google_default_sec = getenv('GOOGLE_DEFAULT_TIME_SEC');
+	    		$now                = time();
+	        $cal_time           = $now - $google_default_sec;
+	        	
+	        	//$trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at >=', $cal_time)->where('code', $code)->get();
+
+	        	$trends_res_qry     = $ytobj->query("SELECT `id`, `yt_id`, `title`, `description`, `thumbnails`, `channel_title`, `category_id`, `stats`, `published_at` FROM `youtube_trends` WHERE `created_at` = (SELECT `created_at` FROM `youtube_trends` WHERE (`code` = '".$code."' AND `created_at` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
+
+
+	        	/* delete old records */
+			    	 $current_time 				  = time();
+			    	 $remain_time            = $current_time -  86400;
+			   	   $ytobj->query("DELETE FROM `youtube_trends` WHERE `created_at` <= $remain_time");
+			      /*  close */
+
+
+	        	$data_res['results'] = [];
+
+        		$resp = [];
+            if($trends_res_qry->getNumRows()):
+
+            	foreach ($trends_res_qry->getResult('array') as $res)
+            	$resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'stats' => (string) $res['stats'], 'published_at' => (string) $res['published_at']];
+
+          		$data_res['results'] = $resp;
+          		return $data_res;
+          	endif;
+
+            $time 					   =  time();
+
+            $youtube_trend_url         =  getenv('YOUTUBE_TREND_URL');
+            $youtube_trend_url_search  =  ['PART', 'CODE', 'MAX_RESULTS', 'KEY'];
+            $youtube_trend_url_replace =  ['snippet', $code, getenv('MAX_RESULTS'), getenv('GOOGLE_API_KEY')];
+
+            $youtube_trend_url         =   str_replace($youtube_trend_url_search, $youtube_trend_url_replace, $youtube_trend_url);
+
+            $flag = 0;
+            try
+             {
+             	$get_file_contents  	   =  file_get_contents($youtube_trend_url);
+             }
+
+            catch(Exception $e)
+             {
+             	$flag = 1;
+             }
+
+            if($flag):
+            	$countries->where(['code' => $code])->set('youtube_status', 0)->update();
+            	$link =  route_to('youtube_trends');
+            	header("Location:" . $link);
+            	exit;
+        	endif;
+
+		    	$get_file_contents  	   =  file_get_contents($youtube_trend_url);
+          $file_contents      	   =  json_decode($get_file_contents);  
+
+            if(isset($file_contents->items)):
+                if(count($file_contents->items)):
+                    foreach($file_contents->items as $content):
+                        $data['yt_id']         = $content->id;
+                        $data['code']          = $code;
+                        $data['title']         = $content->snippet->title;
+                        $data['description']   = $content->snippet->description;
+                        $data['thumbnails']    = json_encode($content->snippet->thumbnails);
+                        $data['channel_title'] = $content->snippet->channelTitle;
+                        $data['category_id']   = $content->snippet->categoryId  ;
+                        $data['published_at']  = $content->snippet->publishedAt;
+                        $data['stats']         = json_encode([]);//$content['stats'];
+                        $data['created_at']    = $time;
+                        $ytobj->insert($data);
+                    endforeach;
+                endif;
+            endif;
+
+            $youtube_trend_url         =  getenv('YOUTUBE_TREND_URL');
+            $youtube_trend_url_search  =  ['PART', 'CODE', 'MAX_RESULTS', 'KEY'];
+            $youtube_trend_url_replace =  ['statistics', $code, getenv('MAX_RESULTS'), getenv('GOOGLE_API_KEY')];
+
+            $youtube_trend_url         =  str_replace($youtube_trend_url_search, $youtube_trend_url_replace, $youtube_trend_url);
+
+            $get_file_contents 		   =  file_get_contents($youtube_trend_url);
+            $file_contents      	   =  json_decode($get_file_contents);  
+            if(isset($file_contents->items)):
+                if(count($file_contents->items)):
+                    foreach($file_contents->items as $content):
+                        $yt_id                 = $content->id;
+                        $stats                 = json_encode($content->statistics);
+                        $ytobj->where(['yt_id' => $yt_id])->set('stats', $stats)->update();
+                    endforeach;
+                endif;
+            endif;
+
+		    $trends_res_qry     = $ytobj->select(['id', 'yt_id', 'title', 'description', 'thumbnails', 'channel_title', 'category_id', 'stats', 'published_at'])->where('created_at', $time)->where('code', $code)->get();
+
+		    	  $resp = [];
+            if($trends_res_qry->getNumRows())
+            	 {
+            	 	 foreach ($trends_res_qry->getResult('array') as $res)
+            	 	 $resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'stats' => (string) $res['stats'], 'published_at' => (string) $res['published_at']];
+            	 }
+            $data_res['results'] = $trends_res_qry->getResult();
+
+        	return $data_res;
+		}
+ }
+
+
+
+
+
 
