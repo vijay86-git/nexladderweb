@@ -299,14 +299,9 @@ if ( ! function_exists("google_trends"))
 
         		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE (`code` = '".$code."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
 
-        		$resp  = [];
         		$data['results']   = [];
         		if($trends_res_qry->getNumRows()):
-
-        			foreach ($trends_res_qry->getResult('array') as $res)
-            	$resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
-
-      			 $data['results']  = $resp;
+      			 $data['results']  = $trends_res_qry->getResult();
       			 return $data;
       			endif;
 
@@ -401,14 +396,10 @@ if ( ! function_exists("google_trends"))
 		             endif;
 		    		}
 
-		        $resp = [];
+		        
 		        $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
             if($trends_res_qry->getNumRows())
-            	 {
-            	 	 foreach ($trends_res_qry->getResult('array') as $res)
-            	 	 $resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
-            	 }
-            $data['results'] = $resp;
+            $data['results'] = $trends_res_qry->getResult();
 
             return $data;
 		 } 
@@ -626,6 +617,170 @@ if ( ! function_exists("topic_route"))
 		    {
 						 return getenv('app.baseURL') . $subject_slug . '/' . $topic_slug;
 		    }
+	}
+
+
+
+/* api */
+
+
+if ( ! function_exists("google_trends_api")) 
+   {
+     function google_trends_api($alias = "")
+		    {		
+
+					$db       		   	      = getDbObject();
+					$countries              = $db->table('countries');
+
+					$trends                 = new TrendModel();
+					$trend_related_builder  = new TrendRelatedModel();
+
+					 /* delete old records */
+			    	$current_time 				  = time();
+			    	$remain_time            = $current_time -  86400;
+			   	  $trends->query("DELETE FROM `trends` WHERE `create_time` <= $remain_time");
+			   	  $trend_related_builder->query("DELETE FROM `trends_related` WHERE `create_time` <= $remain_time");
+			    /* close */
+
+
+					if(empty($alias)):
+					 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
+					 $title                 = "India";
+					else:
+					 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+					 if(isset($country_obj->code))
+					 	 {
+					 	 	  $code           = $country_obj->code;
+							  $title          = $country_obj->title;
+					 	 }
+					   else
+					     {
+					     	return [];
+					     }
+					endif;
+
+				  $data['name']       = ucwords($title);
+
+	    		$google_default_sec = getenv('GOOGLE_DEFAULT_TIME_SEC');
+	    		$now                = time();
+        		$cal_time           = $now - $google_default_sec;
+        		//$trends_res_qry     = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time >=', $cal_time)->where('code', $code)->get();
+
+        		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE (`code` = '".$code."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
+
+        		$resp  = [];
+        		$data['results']   = [];
+        		if($trends_res_qry->getNumRows()):
+
+        			foreach ($trends_res_qry->getResult('array') as $res)
+            	$resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
+
+      			 $data['results']  = $resp;
+      			 return $data;
+      			endif;
+
+	        	$options = [
+				                'hl'  => 'en-GB',
+				                'tz'  => -1200, # last hour
+				                'geo' => $code,
+	            		   ];
+
+		        $time = time();
+
+		        try
+		         {
+		         	$gt   = new GTrends($options);
+		        	$get_daily_search_trends = $gt->getDailySearchTrends();
+		         }
+
+		        catch(Exception $e)
+		         {
+		         	  $countries->where(['code' => $code])->set('google_status', 0)->update();
+            		$link =  route_to('google_trends');
+            		header("Location:" . $link);
+            		exit;
+		         }
+	          	
+		        if(isset($get_daily_search_trends['default']['trendingSearchesDays']))
+		         {
+		             $trendingSearchesDays = $get_daily_search_trends['default']['trendingSearchesDays'];
+		             if(count($trendingSearchesDays)):
+		                foreach($trendingSearchesDays as $key => $trending_searches):
+		                 if($key == 0):
+		                    $date           =  $trending_searches['date'];
+		                    if($date):
+		                      $year         =  substr($date, 0, 4);
+		                      $month        =  substr($date, 4, 2);
+		                      $day          =  substr($date, 6, 2);
+		                      $date_format  =  mktime(0, 0, 0, $month, $day, $year);
+		                    endif;
+		                 endif;
+
+		                 foreach($trending_searches['trendingSearches'] as $trending_search_data):
+		                    $main_title = $trending_search_data['title']['query'] ?? '';
+		                    $formattedTraffic = $trending_search_data['formattedTraffic'] ?? '';
+		                    $image      = $trending_search_data['image']['imageUrl'] ?? '';
+		                    $news_url   = $trending_search_data['image']['newsUrl'] ?? '';
+		                    $source     = $trending_search_data['image']['source'] ?? '';
+		                    $parent_data = [
+		                                        'code' => $code,
+		                                        'formattedTraffic' => $formattedTraffic,
+		                                        'date_format' => $date_format ?? NULL,
+		                                        'title' => $main_title,
+		                                        'image'    => $image,
+		                                        'news_url' => $news_url,
+		                                        'source' => $source,
+		                                        'create_time' => $time
+		                                    ];
+
+		                    $trends->insert($parent_data);
+
+		                    $trend_id = $trends->insertID();
+
+		                    if(isset($trending_search_data['articles'])):
+		                         if(count($trending_search_data['articles'])):
+		                            foreach($trending_search_data['articles'] as $key => $related_articles):
+
+		                                $title    =  $related_articles['title'] ?? '';
+		                                $timeAgo  =  $related_articles['timeAgo'] ?? '';
+		                                $source   =  $related_articles['source'] ?? '';
+		                                $newsUrl  =  $related_articles['image']['newsUrl'] ?? '';
+		                                $imageUrl =  $related_articles['image']['imageUrl'] ?? '';
+		                                $url      =  $related_articles['url'] ?? '';
+		                                $snippet  =  $related_articles['snippet'] ?? '';
+
+		                                $child_data = [
+		                                                'trend_id' => $trend_id,
+		                                                'title' => $title,
+		                                                'time_ago'    => $timeAgo,
+		                                                'source' => $source,
+		                                                'news_url' => $newsUrl,
+		                                                'image_url' => $imageUrl,
+		                                                'url' => $url,
+		                                                'snipped' => $snippet,
+		                                                'create_time' => $time
+		                                             ];
+		                                $trend_related_builder->insert($child_data);
+
+		                            endforeach;
+		                        endif;
+		                    endif;
+		                endforeach;
+		                endforeach;
+		             endif;
+		    		}
+
+		        $resp = [];
+		        $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
+            if($trends_res_qry->getNumRows())
+            	 {
+            	 	 foreach ($trends_res_qry->getResult('array') as $res)
+            	 	 $resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
+            	 }
+            $data['results'] = $resp;
+
+            return $data;
+		 } 
 	}
 
 
