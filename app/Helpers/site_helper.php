@@ -299,9 +299,14 @@ if ( ! function_exists("google_trends"))
 
         		$trends_res_qry     = $trends->query("SELECT `id`, `title`, `image`, `news_url`, `source`, `formattedTraffic` FROM `trends` WHERE `create_time` = (SELECT `create_time` FROM `trends` WHERE (`code` = '".$code."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
 
+        		$resp  = [];
         		$data['results']   = [];
         		if($trends_res_qry->getNumRows()):
-      			 $data['results']  = $trends_res_qry->getResult();
+
+        			foreach ($trends_res_qry->getResult() as $res)
+            	$resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
+
+      			 $data['results']  = $resp;
       			 return $data;
       			endif;
 
