@@ -58,7 +58,7 @@ class Api extends BaseController
     public function trends($alias = '')
         { 
             $res_arr  =  google_trends($alias);
-            return $this->response->setJson(['response' => $res_arr]);
+            return $this->response->setJson(['response' => $res_arr['results']]);
         }
 
     public function subjects($slug = '')
