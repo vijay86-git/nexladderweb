@@ -55,16 +55,20 @@ $routes->get('/category-blogs/(:any)', 'Api::categoryBlogs/$1', ['as' => 'catego
 
 $routes->get('/blog-detail/(:any)', 'Api::blogDetail/$1', ['as' => 'blog-detail.json']);
 
-$routes->get('/trends.json', 'Api::trends', ['as' => 'trends.json']);
+$routes->get('/trends', 'Api::trends', ['as' => 'trends.json']);
+$routes->get('/trends/(:any)', 'Api::trends', ['as' => 'trends_country.json']);
+
 $routes->get('/related_trends/(:any)', 'Api::relatedTrends/$1', ['as' => 'related_trends.json']);
 
 $routes->get('/youtube.json', 'Api::youtube', ['as' => 'youtube.json']);
 $routes->get('/youtube_stats.json', 'Api::youtube_stats', ['as' => 'youtube_stats.json']);
 $routes->get('/youtube_api', 'Api::youtube_api', ['as' => 'youtube_api.json']);
+$routes->get('/youtube_api/(:any)', 'Api::youtube_api', ['as' => 'youtube_country.json']);
 
 
 $routes->get('/twitter', 'Api::twitter', ['as' => 'twitter.json']);
 $routes->get('/twitter_api', 'Api::twitter_api', ['as' => 'twitter_api.json']);
+$routes->get('/twitter_api/(:any)', 'Api::twitter_api', ['as' => 'twitter_country.json']);
 
 $routes->get('/google-trends', 'Trends::google', ['as' => 'google_trends']);
 $routes->get('/google-trends/(:any)', 'Trends::google/$1', ['as' => 'google_trends_country']);
