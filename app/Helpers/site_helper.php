@@ -832,8 +832,10 @@ if ( ! function_exists("youtube_trends_api"))
         		$resp = [];
             if($trends_res_qry->getNumRows()):
 
-            	foreach ($trends_res_qry->getResult('array') as $res)
-            	$resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'stats' => (string) $res['stats'], 'published_at' => (string) $res['published_at']];
+            	foreach ($trends_res_qry->getResult('array') as $res):
+            		  $stats_data = json_decode($res['stats']);
+            	 	  $resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'like' => (int) $stats_data['likeCount'], 'view' => (int) $stats_data['viewCount'], 'comment' => (int) $stats_data['commentCount'], 'dislike' => (int) $stats_data['dislikeCount'], 'favorite' => (int) $stats_data['favoriteCount'], 'published_at' => (string) $res['published_at']];
+            	endforeach;
 
           		$data_res['results'] = $resp;
           		return $data_res;
@@ -909,8 +911,10 @@ if ( ! function_exists("youtube_trends_api"))
 		    	  $resp = [];
             if($trends_res_qry->getNumRows())
             	 {
-            	 	 foreach ($trends_res_qry->getResult('array') as $res)
-            	 	 $resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'stats' => (string) $res['stats'], 'published_at' => (string) $res['published_at']];
+            	 	 foreach ($trends_res_qry->getResult('array') as $res):
+            	 	 	$stats_data = json_decode($res['stats']);
+            	 	  $resp[] = ['id' => (int) $res['id'], 'yt_id' => (string) $res['yt_id'], 'description' => (string) $res['description'], 'thumbnails' => (string) $res['thumbnails'], 'channel_title' => (string) $res['channel_title'], 'category_id' => (string) $res['category_id'], 'like' => (int) $stats_data['likeCount'], 'view' => (int) $stats_data['viewCount'], 'comment' => (int) $stats_data['commentCount'], 'dislike' => (int) $stats_data['dislikeCount'], 'favorite' => (int) $stats_data['favoriteCount'], 'published_at' => (string) $res['published_at']];
+            	 	endforeach;
             	 }
             $data_res['results'] = $trends_res_qry->getResult();
 
