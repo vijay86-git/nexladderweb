@@ -303,7 +303,7 @@ if ( ! function_exists("google_trends"))
         		$data['results']   = [];
         		if($trends_res_qry->getNumRows()):
 
-        			foreach ($trends_res_qry->getResult() as $res)
+        			foreach ($trends_res_qry->getResult('array') as $res)
             	$resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
 
       			 $data['results']  = $resp;
@@ -405,7 +405,7 @@ if ( ! function_exists("google_trends"))
 		        $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
             if($trends_res_qry->getNumRows())
             	 {
-            	 	 foreach ($trends_res_qry->getResult() as $res)
+            	 	 foreach ($trends_res_qry->getResult('array') as $res)
             	 	 $resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
             	 }
             $data['results'] = $resp;
