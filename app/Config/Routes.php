@@ -49,7 +49,7 @@ $routes->get('/subject-topics/(:any)', 'Api::subjectTopics/$1');
 $routes->get('/topic-detail/(:any)', 'Api::topicDetail/$1', ['as' => 'topic-detail.json']);
 
 
-$routes->get('/blog-categories.json', 'Api::blogCategories');
+$routes->get('/blog-categories.json', 'Api::blogCategories', ['as' => 'blog-categories.json']);
 //$routes->get('/blogs.json', 'Page::getBlogs', ['as' => 'blogs.json']);
 $routes->get('/category-blogs/(:any)', 'Api::categoryBlogs/$1', ['as' => 'category-blogs.json']);
 
