@@ -990,7 +990,7 @@ if ( ! function_exists("twitter_trends_api"))
       	  $arr = [];
         	if($trends_res_qry->getNumRows()):
         		 foreach($trends_res_qry->getResult('array') as $res)
-        	   $arr[]      =  ['name' => (string) $res['name'], 'url' => (string) $res['url'], 'tweet' => (int) $res['tweet_volume']];
+        	   $arr[]      =  ['name' => (string) $res['name'], 'url' => (string) $res['url'], 'tweet_volume' => (int) $res['tweet_volume']];
       			return $arr;
       	  endif;
 
@@ -1033,7 +1033,7 @@ if ( ! function_exists("twitter_trends_api"))
                         $data['query']               = $content->query;
                         $data['tweet_volume']        = $content->tweet_volume;
                         $data['create_time']         = $time;
-                        $result[] 					 				 = ['name' => (string) $content->name, 'url' => (string) $content->url, 'tweet' => $content->tweet_volume];
+                        $result[] 					 				 = ['name' => (string) $content->name, 'url' => (string) $content->url, 'tweet_volume' => $content->tweet_volume];
                         $twitter_trends->insert($data);
 		       		endforeach;
 		       	endif;
