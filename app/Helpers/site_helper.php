@@ -929,6 +929,121 @@ if ( ! function_exists("youtube_trends_api"))
  }
 
 
+if ( ! function_exists("twitter_trends_api")) 
+  {
+     function twitter_trends_api($country = "", $place = "")
+      {
+      			$country 			  = "india";
+      	    $twittertrends  =  new TrendLocationModel();
+      	    $twitter_trends =  new TwitterTrendsModel();
+
+      	    /* delete old records */
+		    	   $current_time 				  = time();
+		    	   $remain_time           = $current_time -  86400;
+		   	     $twitter_trends->query("DELETE FROM `twitter_trends` WHERE `create_time` <= $remain_time");
+		       /*  close */
+
+
+      	    if(! empty($country) OR ! empty($place)) 
+      	      {
+      	      	if( ! empty($place)):
+		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $place])->get();
+		      	    else:
+		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $country])->get();
+		      	    endif;
+
+		      	    if($loc_qry->getNumRows()):
+		      	    	$loc_obj     =  $loc_qry->getRow();
+		      	    	$woeid       =  $loc_obj->woeid;
+		      	    	$name        =  $loc_obj->name;
+		      	    	$parent_id   =  $loc_obj->parent_id;
+
+		      	    	$sub_loc_name = '';
+		      	    	if($parent_id != 1):
+		      	    	 $sub_loc_qry = $twittertrends->select(['name'])->limit(1)->where(['woeid' => $parent_id, 'parent_id' => 1])->get();
+		      	    	 if($sub_loc_qry->getNumRows())
+		      	    	 $name        =  $name . ', ' . $sub_loc_qry->getRow()->name;
+		      	     	endif;
+
+		      	    else:
+		      	    	$woeid    	  =   getenv('TWITTER_DEFAULT_WOEID');
+		      	    	$name         =   "Worldwide";
+		      	    endif;
+
+		      	 }
+		      	else
+		      		 {
+		      		 		$woeid    	  =   getenv('TWITTER_DEFAULT_WOEID');
+		      	    	$name         =   "Worldwide";
+		      		 }
+
+      	    $arr['name']          =  $name;
+
+      	    $twitter_default_sec  =  getenv('TWITTER_DEFAULT_TIME_SEC');
+      	    $now                  =  time();
+        		$cal_time             =  $now - $twitter_default_sec;
+
+      	    //$trends_res_qry       =  $twitter_trends->select(['id', 'name', 'url', 'tweet_volume'])->where('create_time >=', $cal_time)->where('woeid', $woeid)->get();
+
+      	    $trends_res_qry       =  $twitter_trends->query("SELECT `id`, `name`, `url`, `tweet_volume` FROM `twitter_trends` WHERE `create_time` = (SELECT `create_time` FROM `twitter_trends` WHERE (`woeid` = '".$woeid."' AND `create_time` >= $cal_time) ORDER BY `id` DESC LIMIT 1)");
+
+      	  $arr = [];
+        	if($trends_res_qry->getNumRows()):
+        		 foreach($trends_res_qry->getResult('array') as $res)
+        	   $arr[]      =  ['name' => (string) $res['name'], 'url' => (string) $res['url'], 'tweet' => (int) $res['tweet_volume']];
+      			return $arr;
+      	  endif;
+
+      		$settings  =       array(
+			                            'oauth_access_token' => getenv('TWITTER_OAUTH_ACCESS_TOKEN'),
+			                            'oauth_access_token_secret' => getenv('TWITTER_OAUTH_ACCESS_TOKEN_SECRET'),
+			                            'consumer_key' => getenv('TWITTER_CONSUMER_KEY'),
+			                            'consumer_secret' => getenv('TWITTER_CONSUMER_SECRET')
+                         			);
+
+	        $url            =  getenv('TWITTER_TREND_URL');
+	        $requestMethod  = "GET";
+	        $getfield       = "?id=" . $woeid;
+	        $twitter        = new TwitterAPIExchange($settings);
+
+	        $is_error_occured = false;
+	        try
+	         {
+	         	$json_response    = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
+	         }
+	        catch(Exception $e)
+	         {
+	         	$is_error_occured = true;
+	         }
+	        
+	       	$time      		  =  time();
+	       	$result         =  array();
+
+	        if( ! $is_error_occured):
+
+		        $resp    = @json_decode($json_response);
+
+		        if(count($resp)):
+		        	foreach($resp[0]->trends as $content):
+                        $data 						 = [];
+                        $data['woeid']               = $woeid;
+                        $data['name']                = $content->name;
+                        $data['url']                 = $content->url;
+                        $data['promoted_content']    = $content->promoted_content;
+                        $data['query']               = $content->query;
+                        $data['tweet_volume']        = $content->tweet_volume;
+                        $data['create_time']         = $time;
+                        $result[] 					 				 = ['name' => (string) $content->name, 'url' => (string) $content->url, 'tweet' => $content->tweet_volume];
+                        $twitter_trends->insert($data);
+		       		endforeach;
+		       	endif;
+
+		    endif;
+
+		    return $result;
+      }
+  }
+
 
 
 
