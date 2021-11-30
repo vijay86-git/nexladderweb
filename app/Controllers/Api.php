@@ -87,7 +87,6 @@ class Api extends BaseController
 
     public function blogCategories()
      {
-        die('sdf');
          $query   = "SELECT t.term_id AS id, t.name FROM tbl_terms t LEFT JOIN tbl_term_taxonomy tt ON t.term_id = tt.term_id WHERE tt.taxonomy = 'category' and t.name != 'Uncategorized' ORDER BY name";
          $db      = \Config\Database::connect('blog');
          $results = $db->query($query);
