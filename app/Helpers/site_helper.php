@@ -396,10 +396,14 @@ if ( ! function_exists("google_trends"))
 		             endif;
 		    		}
 
-		        
+		        $resp = [];
 		        $trends_res_qry  = $trends->select(['id', 'title', 'image', 'news_url', 'source', 'formattedTraffic'])->where('create_time', $time)->where('code', $code)->get();
             if($trends_res_qry->getNumRows())
-            $data['results'] = $trends_res_qry->getResult();
+            	 {
+            	 	 foreach ($trends_res_qry->getResult() as $res)
+            	 	 $resp[] = ['id' => (int) $res['id'], 'title' => (string) $res['title'], 'image' => (string) $res['image'], 'news_url' => (string) $res['news_url'], 'source' => (string) $res['source'], 'formattedTraffic' => (string) $res['formattedTraffic']];
+            	 }
+            $data['results'] = $resp;
 
             return $data;
 		 } 
