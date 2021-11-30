@@ -45,7 +45,7 @@ class Api extends BaseController
 
     public function twitter_api($country = '', $place = '')
      {
-            $res_arr  = twitter_trends($country, $place);
+            $res_arr  = twitter_trends_api($country, $place);
             return $this->response->setJson(['response' => $res_arr]);
      }
 
