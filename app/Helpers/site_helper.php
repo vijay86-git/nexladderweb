@@ -626,7 +626,7 @@ if ( ! function_exists("topic_route"))
 
 if ( ! function_exists("google_trends_api")) 
    {
-     function google_trends_api($alias = "")
+     function google_trends_api($code = "")
 		    {		
 
 					$db       		   	      = getDbObject();
@@ -643,11 +643,11 @@ if ( ! function_exists("google_trends_api"))
 			    /* close */
 
 
-					if(empty($alias)):
+					if(empty($code)):
 					 $code        		    = getenv('GOOGLE_DEFAULT_TRENDS');
 					 $title                 = "India";
 					else:
-					 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+					 $country_obj 			  = $countries->select(['code', 'title'])->where('code', $code)->get()->getRow();
 					 if(isset($country_obj->code))
 					 	 {
 					 	 	  $code           = $country_obj->code;
@@ -788,17 +788,17 @@ if ( ! function_exists("google_trends_api"))
 
 if ( ! function_exists("youtube_trends_api")) 
   {
-     function youtube_trends_api($alias = "")
+     function youtube_trends_api($code = "")
 		  {
 	        $db       		   	  = getDbObject();
           $countries            = $db->table('countries');
           $ytobj             	  = new YoutubeModel();
 
-    	    if(empty($alias)):
+    	    if(empty($code)):
     			 $code        			  = getenv('GOOGLE_DEFAULT_TRENDS');
     			 $title                   = "India";
     	    else:
-    			 $country_obj 			  = $countries->select(['code', 'title'])->where('alias', $alias)->get()->getRow();
+    			 $country_obj 			  = $countries->select(['code', 'title'])->where('code', $code)->get()->getRow();
     			 if(isset($country_obj->code)) {
 	               $code                  = $country_obj->code;
 	               $title                 = $country_obj->title;
@@ -933,7 +933,6 @@ if ( ! function_exists("twitter_trends_api"))
   {
      function twitter_trends_api($country = "", $place = "")
       {
-      			$country 			  = "india";
       	    $twittertrends  =  new TrendLocationModel();
       	    $twitter_trends =  new TwitterTrendsModel();
 
@@ -949,7 +948,7 @@ if ( ! function_exists("twitter_trends_api"))
       	      	if( ! empty($place)):
 		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $place])->get();
 		      	    else:
-		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['alias' => $country])->get();
+		      	    	 $loc_qry  = $twittertrends->select(['name', 'parent_id', 'woeid'])->limit(1)->where(['country_code' => $country])->get();
 		      	    endif;
 
 		      	    if($loc_qry->getNumRows()):
