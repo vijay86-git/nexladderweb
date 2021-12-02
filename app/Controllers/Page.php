@@ -24,12 +24,6 @@ class Page extends BaseController
 		 return view('Frontend/Pages/about');
 	  }
 
-	public function show404()
-	  { 
-		 return view('Frontend/Pages/show404');
-	  }
-
-
 	public function disclaimer()
 	  { 
 		 return view('Frontend/Pages/disclaimer');
