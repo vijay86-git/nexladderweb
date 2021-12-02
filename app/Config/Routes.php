@@ -65,6 +65,8 @@ $routes->get('/youtube_stats.json', 'Api::youtube_stats', ['as' => 'youtube_stat
 $routes->get('/youtube_api', 'Api::youtube_api', ['as' => 'youtube_api.json']);
 $routes->get('/youtube_api/(:any)', 'Api::youtube_api/$1', ['as' => 'youtube_country.json']);
 
+$routes->post('/contact', 'Api::contact', ['as' => 'contact.json']);
+
 
 $routes->get('/twitter', 'Api::twitter', ['as' => 'twitter.json']);
 $routes->get('/twitter_api', 'Api::twitter_api', ['as' => 'twitter_api.json']);

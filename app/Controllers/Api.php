@@ -145,6 +145,26 @@ class Api extends BaseController
          return view('Frontend/Blog_webview', compact('heading', 'content'));
      }
 
+    public function contact()
+     {
+
+        $post_array                     = $this->request->getPost();
+
+        $name                           = $this->request->getVar('name');
+        $email                          = $this->request->getVar('email');
+        $message                        = $this->request->getVar('message');
+
+        $email = \Config\Services::email();
+
+        $email->setFrom('no-reply@nexladder.com', 'Nexladder');
+        $email->setSubject('Nexladder Query');
+        $email->setMessage($message);
+
+        $email->send();
+
+        return $this->response->setJson(['name' => $name]);
+     }
+
     /*
 
     public function blogDetail($id = '')
