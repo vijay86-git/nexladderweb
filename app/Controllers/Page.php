@@ -26,7 +26,6 @@ class Page extends BaseController
 
 	public function show404()
 	  { 
-	  	echo "sdf";
 		 return view('Frontend/Pages/show404');
 	  }
 
