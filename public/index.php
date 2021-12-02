@@ -1,5 +1,7 @@
 <?php
 
+@date_default_timezone_set('Asia/Kolkata');
+
 // Path to the front controller (this file)
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
