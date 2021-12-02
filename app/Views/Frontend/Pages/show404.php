@@ -19,7 +19,7 @@
 
             <div class="row">
                <div class="col-md-12" id="" style="height:400px">
-                  <h2>404 - File Not Found</h2>
+                  <br /><br /><h1>404 - File Not Found</h1>
                   <p>Sorry! Cannot seem to find the page you were looking for.</p>
                </div>
                <div class="col-md-1"></div>
