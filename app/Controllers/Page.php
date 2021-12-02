@@ -24,6 +24,12 @@ class Page extends BaseController
 		 return view('Frontend/Pages/about');
 	  }
 
+	public function show404()
+	  { 
+		 return view('Frontend/Pages/show404');
+	  }
+
+
 	public function disclaimer()
 	  { 
 		 return view('Frontend/Pages/disclaimer');
@@ -139,10 +145,5 @@ class Page extends BaseController
                     $text     = str_replace("-", " ", $fileinfo['filename']);
                     return view('Frontend/Codemirror', compact('file', 'text'));
                }
-               else
-			    die('sdf');
-                   // abort(404);
       }
-
-
 }

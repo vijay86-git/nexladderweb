@@ -93,6 +93,8 @@ $routes->get('/converter/(:any)', 'Converter::unit/$1', ['as' => 'unit.convertor
 $routes->get('/cryptography-tools', 'Converter::cryptography', ['as' => 'cryptography']);
 $routes->get('/cryptography-tools/(:any)', 'Converter::tools/$1', ['as' => 'cryptography.tools']);
 
+$routes->set404Override('Page::show404');
+
 
 $routes->group('panel', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 
