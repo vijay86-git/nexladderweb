@@ -75,7 +75,9 @@ class Page extends BaseController
 
 	public function subject($slug = '')
 	{ 
-		$subject    =  $this->_subjectobj->select()->where('slug', $slug)->first(); 
+		$subject    =  $this->_subjectobj->select()->where('slug', $slug)->first();
+		if( ! $subject) 
+		throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
 
 		$sections   =  $this->_sectionobj->where('subject_id', $subject['id'])->get(); 
 
