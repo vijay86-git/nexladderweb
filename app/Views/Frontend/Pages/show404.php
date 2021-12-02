@@ -18,7 +18,7 @@
             </div>
 
             <div class="row">
-               <div class="col-md-12" id="" style="height:400px">
+               <div class="col-md-12" id="" style="height:200px">
                   <br /><br /><h1>404 - File Not Found</h1>
                   <p>Sorry! Cannot seem to find the page you were looking for.</p>
                </div>
