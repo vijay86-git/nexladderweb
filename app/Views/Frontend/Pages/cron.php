@@ -8,6 +8,7 @@
     .cron p {font-size:14px;margin:20px 0 0 0}
     #crontab_data { font-weight:bold;font-size:44px;color:#338700}
     .cron_gen_box{border:1px dashed #ddd;border-radius:10px;margin-top:20px;background:#fbfbfb;}
+    .info ul li {line-height:26px;}
 
 </style>
 
@@ -39,7 +40,7 @@
                       <p><span class='' id='crontab_data'></span></p>
                     </div>
 
-                    <p>
+                    <div class="info">
                           <ul>
                             <li>The first number is the minutes after the hour (0-59)</li>
                             <li>The second is the hour of the day (0-23, with 0 being 12 AM EST)</li>
@@ -47,8 +48,8 @@
                             <li>The fourth is the month of the year (1-12)</li>
                             <li>The fifth is the day of the week (0-6, with 0 = Sunday and 6 = Saturday, etc.)</li>
                            </ul>
-                      </p>
-                      
+                      </div>
+
                   </div>
 
                </div>
