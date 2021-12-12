@@ -1,6 +1,7 @@
 <?php echo $this->extend('Frontend/Layouts/Template'); ?>
 <?php echo $this->section('content'); ?>
 <style>
+    .mrgntp20{margin-top:20px;}
     #crontab {font-size:24px}
     #crontab select { border:1px solid #ddd;padding:3px}
     .gen{font-size:22px !important}
@@ -27,8 +28,8 @@
             </div>
 
             <div class="row">
-               <div class="col-md-12 text-center" style="height:400px">
-                  <h2>Cron Generator</h2>
+               <div class="col-md-12 text-center mrgntp20">
+                  <h2><strong>Cron Generator</strong></h2>
                   <p>It is a online tool which help to generate a Cron expression easily.</p>
 
                   <div class='cron'>
