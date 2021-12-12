@@ -38,6 +38,17 @@
                       <p class="gen">Generated cron entry: </p>
                       <p><span class='' id='crontab_data'></span></p>
                     </div>
+
+                    <p>
+                          <ul>
+                            <li>The first number is the minutes after the hour (0-59)</li>
+                            <li>The second is the hour of the day (0-23, with 0 being 12 AM EST)</li>
+                            <li>The third number is the day of the month (1-31)</li>
+                            <li>The fourth is the month of the year (1-12)</li>
+                            <li>The fifth is the day of the week (0-6, with 0 = Sunday and 6 = Saturday, etc.)</li>
+                           </ul>
+                      </p>
+                      
                   </div>
 
                </div>
