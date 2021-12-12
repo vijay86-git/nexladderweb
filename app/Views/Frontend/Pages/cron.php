@@ -15,7 +15,7 @@
 		  <div class="bodyPart">
 
             <div class="row">
-               <div class="col-md-12 text-center mrgntp20">
+               <div class="col-md-12 text-center">
                   <h2><strong>Cron Generator</strong></h2>
                   <p>It is a online tool which help to generate a Cron expression easily.</p>
 
@@ -41,7 +41,7 @@
                </div>
             </div>
 
-            <div class="row">
+            <div class="row mrgntp20">
                <div class="col-md-12">
                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                   <!-- Ad 1 -->
@@ -55,7 +55,7 @@
                   </script>
                </div>
             </div>
-            
+
          </div>
 
 <?php $this->endSection(); ?>
