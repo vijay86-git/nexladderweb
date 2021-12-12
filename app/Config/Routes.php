@@ -93,6 +93,8 @@ $routes->get('/converter/(:any)', 'Converter::unit/$1', ['as' => 'unit.convertor
 $routes->get('/cryptography-tools', 'Converter::cryptography', ['as' => 'cryptography']);
 $routes->get('/cryptography-tools/(:any)', 'Converter::tools/$1', ['as' => 'cryptography.tools']);
 
+$routes->get('/crontab-generator', 'Page::cron', ['as' => 'cron_tab_generator']);
+
 
 $routes->set404Override(function ()
 {

@@ -19,6 +19,13 @@ class Page extends BaseController
             $this->_topicobj    = new TopicModel();
         }
 
+    
+    public function cron()
+	  { 
+	  	 $page_title = 'Crontab Generator - Online CronJob Expression Maker';
+		 return view('Frontend/Pages/cron', compact('page_title'));
+	  }
+
 	public function about()
 	  { 
 		 return view('Frontend/Pages/about');
