@@ -23,7 +23,8 @@ class Page extends BaseController
     public function cron()
 	  { 
 	  	 $page_title = 'Crontab Generator - Online CronJob Expression Maker';
-		 return view('Frontend/Pages/cron', compact('page_title'));
+	  	 $page_keywords = 'cron generator, cron generator online, crontab generator, crontab generator online, cron expression generator, cron job, crontab format, crontab online';
+		 return view('Frontend/Pages/cron', compact('page_title', 'page_keywords'));
 	  }
 
 	public function about()
