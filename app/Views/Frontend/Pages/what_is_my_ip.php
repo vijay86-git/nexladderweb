@@ -7,7 +7,7 @@
           <div class="bodyPart">
             <div class="row">
                <div class="col-md-6 text-center">
-                   <table class="table table-responsive table-bordered">
+                   <table class="table table-responsive table-bordered table-striped">
                        <thead>
                        </thead>
                        <tbody>
