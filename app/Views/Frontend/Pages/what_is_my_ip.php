@@ -11,13 +11,13 @@
                    <table class="table table-responsive table-bordered table-striped">
                        <thead>
                          <tr class="head">
-                            <th colspan="2" class="text-center">IP Details</th>
+                            <th colspan="2" class="text-center"><i class="fa fa-hand-o-down" aria-hidden="true"></i> IP Details</th>
                          </tr>
                        </thead>
                        <tbody>
                          
                          <tr>
-                           <td><i class="fa fa-hand-o-down" aria-hidden="true"></i> IP Address</td>
+                           <td>IP Address</td>
                            <td><?php echo ( ! empty($response['geoplugin_request']) ? $response['geoplugin_request'] : 'N/A' ) ?></td>
                          </tr>
                          <tr>
