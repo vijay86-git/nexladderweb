@@ -43,7 +43,7 @@ class Page extends BaseController
 	public function base64_decode()
 	  { 
 	  	 $page_title    = 'Base64 Decode Converter Online';
-	  	 $page_keywords = 'base64 decode online, online generate base64 decode, generate online base64 decode, base64 decode converter online, converter base64 decode online';
+	  	 $page_keywords = 'base64 decode online, online base64 decode, base64 decode, base64 decode online, base64 decode online';
 		 return view('Frontend/Pages/base64_decode', compact('page_title', 'page_keywords'));
 	  }
 	
