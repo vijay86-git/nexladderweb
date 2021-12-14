@@ -9,7 +9,7 @@
     #crontab_data { font-weight:bold;font-size:44px;color:#338700}
     .cron_gen_box{border:1px dashed #ddd;border-radius:10px;margin-top:20px;background:#fbfbfb;}
     .info ul li {line-height:26px;}
-    #encode_data {margin:20px 0;font-size:16px;padding:10px;border:1px dashed #ddd;border-radius:10px;display:none;}
+    #encode_data {word-break:break-all;margin:20px 0;font-size:16px;padding:10px;border:1px dashed #ddd;border-radius:10px;display:none;}
 
 </style>
 
