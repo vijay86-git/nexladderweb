@@ -17,7 +17,7 @@
                        <tbody>
                          
                          <tr>
-                           <td>IP Address</td>
+                           <td><i class="fa fa-hand-o-down" aria-hidden="true"></i> IP Address</td>
                            <td><?php echo ( ! empty($response['geoplugin_request']) ? $response['geoplugin_request'] : 'N/A' ) ?></td>
                          </tr>
                          <tr>
