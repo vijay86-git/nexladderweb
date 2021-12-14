@@ -90,7 +90,7 @@
 
                <div class="col-md-6 text-center">
 
-                  <iframe width="100%" height="525" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $response['geoplugin_latitude'] ?>,<?php echo $response['geoplugin_longitude'] ?>&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                  <iframe width="100%" height="525" id="" src="https://maps.google.com/maps?q=<?php echo $response['geoplugin_latitude'] ?>,<?php echo $response['geoplugin_longitude'] ?>&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
                </div>
 
