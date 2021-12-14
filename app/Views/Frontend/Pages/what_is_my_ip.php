@@ -1,7 +1,8 @@
 <?php echo $this->extend('Frontend/Layouts/Template'); ?>
 <?php echo $this->section('content'); ?>
 <style>
-    .mrgntp20{margin-top:20px;}
+    .mrgntp20{margin-top:20px}
+    .head{font-size:22px;font-weight:bold}
 </style>
 
           <div class="bodyPart">
@@ -9,6 +10,9 @@
                <div class="col-md-6 text-center">
                    <table class="table table-responsive table-bordered table-striped">
                        <thead>
+                         <tr class="head">
+                            <th colspan="2" class="text-center">IP Details</th>
+                         </tr>
                        </thead>
                        <tbody>
                          
@@ -89,7 +93,7 @@
                </div>
 
                <div class="col-md-6 text-center">
-
+                  <h1><i class="fa fa-hand-o-down" aria-hidden="true"></i> Location On Map</h1>
                   <iframe width="100%" height="525" id="" src="https://maps.google.com/maps?q=<?php echo $response['geoplugin_latitude'] ?>,<?php echo $response['geoplugin_longitude'] ?>&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
                </div>
