@@ -26,7 +26,6 @@
                             <td style="text-align:center">
                                 <h4>Select Size:</h4>
                             </td>
-                            <?php echo 'sdd'.$_SERVER['REMOTE_ADDR']; ?>
                                 <td> 
                                     <select name="size" class="form-control">
                                         <option value="100x100">100x100</option>
@@ -55,8 +54,6 @@
                  </form>
 
                  <p>A QR code (an initialism for Quick Response code) is a type of matrix barcode (or two-dimensional barcode) invented in 1994 by the Japanese automotive company Denso Wave. A barcode is a machine-readable optical label that can contain information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used. <a rel="nofollow" href="https://en.wikipedia.org/wiki/QR_code" target="_blank"><strong>read more &raquo;</strong></a></p>
-
-
 
                </div>
             </div>
