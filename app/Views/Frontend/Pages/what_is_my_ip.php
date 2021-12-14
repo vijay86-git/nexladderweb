@@ -115,21 +115,3 @@
          </div>
 
 <?php $this->endSection(); ?>
-<?php echo $this->section('js'); ?>
-<script src="<?php echo loadAssetsFiles('build/assets/js/jquery.base64.min.js?v=1.0'); ?>"></script>
-<script type="text/javascript">
-    $(function(){
-       $("#decode_now").click(function(){
-           $("#decode_data").html("");
-           var txt = $.trim($('textarea[name="txt"]').val());
-           if(txt == '') {
-             alert("Please enter text you want to decode");
-             return false;
-           }
-           let decode = $.base64.decode(txt);
-           $("#decode_data").html(decode).css('display', 'block');
-       });
-  });
-
-</script>
-<?php $this->endSection(); ?>
