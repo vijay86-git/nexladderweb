@@ -16,7 +16,7 @@
           <div class="bodyPart">
             <div class="row">
                <div class="col-md-12 text-center">
-                  <h2><strong>Online Base64 Decode Tool <?php echo $_SERVER['REMOTE_ADDR'] ?></strong></h2>
+                  <h2><strong>Online Base64 Decode Tool</strong></h2>
                   <p><textarea class="form-control" name="txt" placeholder="Type / Paste Text Here.." rows="6"></textarea></p>
                   <p><button class="btn btn-lg btn-success" id="decode_now" type="button">Decode Now</button></p>
                   <p><div id="decode_data"></div></p>
