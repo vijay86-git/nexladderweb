@@ -47,7 +47,7 @@
                                 </td>
                             <td>
                         <button class="btn btn-lg btn-success" id="qr_gen" type="button">Generator QR Code</button></td></tr>
-                        <tr class="success">
+                        <tr class="">
                             <td colspan=3 style="text-align:center"><div id="qrcode"></div></td>
                         </tr>
                     </table>
