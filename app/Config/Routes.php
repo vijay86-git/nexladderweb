@@ -98,6 +98,7 @@ $routes->get('/qrcode-generator', 'Page::qrcode_generator', ['as' => 'qrcode_gen
 
 $routes->get('/base64-encode-online', 'Page::base64_encode', ['as' => 'base64_encode']);
 $routes->get('/base64-decode-online', 'Page::base64_decode', ['as' => 'base64_decode']);
+$routes->get('/what-is-my-ip', 'Page::what_is_my_ip', ['as' => 'what_is_my_ip']);
 
 $routes->set404Override(function ()
 {

@@ -18,6 +18,17 @@ class Page extends BaseController
             $this->_sectionobj  = new SectionModel();
             $this->_topicobj    = new TopicModel();
         }
+
+
+    public function what_is_my_ip()
+     {
+     	$ip_address = $this->request->getIPAddress();
+     	$get_data   = file_get_contents("http://www.geoplugin.net/php.gp?ip=" . $ip_address);
+     	$response   = unserialize($get_data);
+     	$page_title = 'What is my IP - IP Location Finder | nexladder web tutorials';
+	  	 $page_keywords = 'what is my ip, what is my ip address, my ip address, ip address locator';
+		 return view('Frontend/Pages/what_is_my_ip', compact('page_title', 'page_keywords', 'response'));
+     }
     
     public function cron()
 	  { 
