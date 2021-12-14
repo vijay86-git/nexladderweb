@@ -94,7 +94,10 @@ $routes->get('/cryptography-tools', 'Converter::cryptography', ['as' => 'cryptog
 $routes->get('/cryptography-tools/(:any)', 'Converter::tools/$1', ['as' => 'cryptography.tools']);
 
 $routes->get('/crontab-generator', 'Page::cron', ['as' => 'cron_tab_generator']);
+$routes->get('/qrcode-generator', 'Page::qrcode_generator', ['as' => 'qrcode_generator']);
 
+$routes->get('/base64-encode-online', 'Page::base64_encode', ['as' => 'base64_encode']);
+$routes->get('/base64-decode-online', 'Page::base64_decode', ['as' => 'base64_decode']);
 
 $routes->set404Override(function ()
 {

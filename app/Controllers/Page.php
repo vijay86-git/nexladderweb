@@ -18,7 +18,6 @@ class Page extends BaseController
             $this->_sectionobj  = new SectionModel();
             $this->_topicobj    = new TopicModel();
         }
-
     
     public function cron()
 	  { 
@@ -26,6 +25,28 @@ class Page extends BaseController
 	  	 $page_keywords = 'cron generator, cron generator online, crontab generator, crontab generator online, cron expression generator, cron job, crontab format, crontab online';
 		 return view('Frontend/Pages/cron', compact('page_title', 'page_keywords'));
 	  }
+
+	public function qrcode_generator()
+	  { 
+	  	 $page_title    = 'Create / Generate QRCode - Online';
+	  	 $page_keywords = 'create qrcode online, generate qrcode online, online create qrcode, qrcode generate online, online generate qrcode';
+		 return view('Frontend/Pages/qrcode_generator', compact('page_title', 'page_keywords'));
+	  }
+
+	public function base64_encode()
+	  { 
+	  	 $page_title    = 'Base64 Encode Converter Online';
+	  	 $page_keywords = 'base64 encode online, online generate base64 encode, generate online base64 encode, base64 encode converter online, converter base64 encode online';
+		 return view('Frontend/Pages/base64_encode', compact('page_title', 'page_keywords'));
+	  }
+
+	public function base64_decode()
+	  { 
+	  	 $page_title    = 'Base64 Decode Converter Online';
+	  	 $page_keywords = 'base64 decode online, online generate base64 decode, generate online base64 decode, base64 decode converter online, converter base64 decode online';
+		 return view('Frontend/Pages/base64_decode', compact('page_title', 'page_keywords'));
+	  }
+	
 
 	public function about()
 	  { 
