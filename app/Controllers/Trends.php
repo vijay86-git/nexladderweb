@@ -21,6 +21,7 @@ class Trends extends BaseController
             $this->_topicobj    = new TopicModel();
             $this->_countryobj  = new CountryModel();
             $this->_twitter_loc = new TrendLocationModel();
+            @date_default_timezone_set('Asia/Kolkata');
         }
 
 	public function google($alias = '')
