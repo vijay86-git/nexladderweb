@@ -15,17 +15,17 @@
       <meta name="msvalidate.01" content="F13063B8299624F18B7C4E98367AE3E1" />
       <meta name="description" content="Free Online Tutorials, Tutorials Online, nexladder provides tutorials like php tutorial, ajax, mysql etc for beginners and professionals." />
       <meta name="keywords" content="<?php echo isset($page_keywords) ? $page_keywords : "nexladder, php tutorial, mysql tutorial and more for beginners and professionals" ?>" />
-      <link rel="canonical" href="https://nexladder.com" />
+      <link rel="canonical" href="<?php echo current_url(); ?>" />
       <meta property="og:image" content="https://nexladder.com/images/nexsharelogo.png" />
       <meta property="og:title" content="<?php echo isset($page_title) ? $page_title : "Online Web Development Tutorials | Nexladder" ?>" />
       <meta property="og:description" content="Free Online Tutorials, Tutorials Online, nexladder provides tutorials like php tutorial, ajax, mysql etc for beginners and professionals." />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://nexladder.com" />
+      <meta property="og:url" content="<?php echo current_url(); ?>" />
       <meta property="og:site_name" content="https://nexladder.com" />
       <meta name="twitter:title" property="og:title" content="Nexladder Online Web Tutorials" />
       <meta name="twitter:description" property="og:description" content="Free Online Tutorials, Tutorials Online, nexladder provides tutorials like php tutorial, ajax, mysql etc for beginners and professionals." />
-      <meta property="og:url" content="https://nexladder.com" />
+      <meta property="og:url" content="<?php echo current_url(); ?>" />
       <meta property="og:site_name" content="nexladder.com" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="nexladder.com" />
